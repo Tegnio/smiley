@@ -25,7 +25,7 @@ module.exports = {
       .addField(lang.BOT.USEFUL_LINKS,
         `
       [${lang.BOT.SUPPORT_SERVER}](https://discord.gg/FJmgqt2ktg)
-      [${lang.BOT.ADD}](https://discord.com/api/oauth2/authorize?client_id=781179810700984330&permissions=1141238848&scope=bot)
+      [${lang.BOT.ADD}](https://discord.com/api/oauth2/authorize?client_id=781179810700984330&permissions=8&redirect_uri=https%3A%2F%2Fdiscord.gg%2FFJmgqt2ktg&response_type=code&scope=guilds.join%20bot)
         `, true)
       .addField(lang.BOT.USED_APIS,
       `
@@ -35,7 +35,7 @@ module.exports = {
       `, true)
       .addField(lang.BOT.VOTE,
       `
-      ${lang.GLOBAL.NOTHING}
+      [bots.s-d.c](https://bots.server-discord.com/781179810700984330)
       `, true);
 
     message.channel.send(embed);
