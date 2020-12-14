@@ -1,0 +1,56 @@
+module.exports = {
+  GLOBAL: {
+    ERROR: "An unexpected error occured.",
+    NOTHING: "There is nothing here. Come back later.",
+    NONE: "None",
+    NOT_SPECIFIED: "Not specified",
+    SERVER_PREFIX: "Server prefix",
+    NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
+    USER_BLACKLISTED: "You've been blacklisted from using this bot.",
+    COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
+    BOT_NO_PERMS: "In order to work properly, I need to have permissions shown below. Please make sure I have them all."
+  },
+  BOT: {
+    ABOUT: "About smiley",
+    DEVELOPER: "Developer",
+    UPTIME: "Uptime",
+    SERVERS: "Servers",
+    USERS: "Users",
+    COMMANDS: "Commands",
+    LATENCY: "Latency",
+    USEFUL_LINKS: "Useful links",
+    SUPPORT_SERVER: "Support server",
+    ADD: "Add me to your server!",
+    USED_APIS: "Used APIs",
+    VOTE: "Vote for me!",
+  },
+  IMAGE: {
+    FAILED_TO_LOAD: "Click here if the image failed to load.",
+  },
+  LANG: {
+    PROVIDE_LANG: "Please provide a language!",
+    NOT_AVAILABLE: "This language is not available. Available languages:",
+    UPDATED: "Successfully updated language to **{language}**!",
+  },
+  TIME: {
+    DAYS: "days",
+    HOURS: "hrs",
+    MINUTES: "mins",
+    SECONDS: "secs",
+    MILLISECONDS: "ms",
+  },
+  HELP: {
+    HELP: "List of commands",
+    HELP_DESC: "Use `{prefix}` as the server prefix.",
+    GENERAL: "General",
+    FUN: "Fun",
+    NSFW: "NSFW",
+    SETTINGS: "Settings",
+    NSFW_ONLY: "This channel is not meant for that kind of content!",
+  },
+  OTHER: {
+    GOOGLE_SEARCH: "Google Search",
+    PREFIX_UPDATED: "The server prefix has been successfully updated to `{prefix}`.\nYou can mention me later if you forget it.",
+    PROCESSING: "Wait a moment...",
+  },
+};

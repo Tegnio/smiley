@@ -1,0 +1,62 @@
+[
+    {
+        "keys": ["europe", "eu-west", "eu-central"],
+        "flag": ":flag_eu:"
+    },
+    {
+        "keys": ["brazil"],
+        "flag": ":flag_br:"
+    },
+    {
+        "keys": ["hongkong"],
+        "flag": ":flag_hk:"
+    },
+    {
+        "keys":[ "india"],
+        "flag": ":flag_in:"
+    },
+    {
+        "keys": ["japan"],
+        "flag": ":flag_jp:"
+    },
+    {
+        "keys": ["russia"],
+        "flag": ":flag_ru:"
+    },
+    {
+        "keys": ["singapore"],
+        "flag": ":flag_sg:"
+    },
+    {
+        "keys": ["southafrica"],
+        "flag": ":flag_za:"
+    },
+    {
+        "keys": ["sydney"],
+        "flag": ":flag_au:"
+    },
+    {
+        "keys": ["frankfurt"],
+        "flag": ":flag_de:"
+    },
+        {
+        "keys": ["us-central", "us-east", "us-west", "us-south"],
+        "flag": ":flag_us:"
+    },
+    {
+        "keys": ["amsterdam"],
+        "flag": ":flag_nl:"
+    },
+    {
+        "keys": ["dubai"],
+        "flag": ":flag_ae:"
+    },
+    {
+        "keys": ["south-korea"],
+        "flag": ":flag_kr:"
+    },
+    {
+        "keys": ["london"],
+        "flag": ":flag_gb:"
+    }
+]
