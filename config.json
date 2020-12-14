@@ -1,0 +1,7 @@
+{
+    "token": "NzgxMTc5ODEwNzAwOTg0MzMw.X754ZA.K4i6mn4odYE2i6zQ1XxEUrvZ4q0",
+    "owners": ["515551959311450123", "612975298228781096", "781179810700984330"],
+    "feedBackChannelId": "785804413619929098",
+    "mongodbUri": "mongodb+srv://smiley:hHoXU5BIXV8c1KUm@cluster0.clc8r.mongodb.net/smiley1126?retryWrites=true&w=majority",
+    "errorLogsChannelId": "785804374092939275"
+}
