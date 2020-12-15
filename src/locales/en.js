@@ -52,6 +52,7 @@ module.exports = {
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Search",
+    PREFIX_UPDATE: "Use `{cmd}` to set a new prefix",
     PREFIX_UPDATED: "The server prefix has been successfully updated to `{prefix}`.\nYou can mention me later if you forget it.",
     PROCESSING: "Wait a moment...",
   },

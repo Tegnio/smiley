@@ -52,6 +52,7 @@ module.exports = {
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Поиск",
+    PREFIX_UPDATE: "Используйте `{cmd}` для установки нового префикса",
     PREFIX_UPDATED: "Серверный префикс был успешно обновлен на `{prefix}`.\nВы сможете упомянуть меня позже, если его забудете.",
     PROCESSING: "Секунду...",
   },

@@ -14,7 +14,7 @@ module.exports = {
 
     if (!prefix)
       return message.channel.send(
-        `${lang.GLOBAL.SERVER_PREFIX}: \`${guild.prefix}\` \n Use \`${guild.prefix}prefix <prefix>\` to set a new prefix`
+        `${lang.GLOBAL.SERVER_PREFIX}: \`${guild.prefix}\`\n${lang.OTHER.PREFIX_UPDATE.replace("{cmd}", `${guild.prefix}prefix <prefix>`)}`
       );
 
     if (message.author.id === ownerId) {
