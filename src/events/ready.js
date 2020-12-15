@@ -3,10 +3,9 @@ const Logger = require("../modules/Logger");
 module.exports = {
   name: "ready",
   execute(bot) {
-    const servers = bot.guilds.cache.size;
     const commands = bot.commands.size;
     const statuses = [
-      `s)help | ${commands} ⚙️ | ${servers} 🗄️`,
+      `s)help | ${commands} ⚙️`,
     ];
 
     Logger.log("bot", "Bot is running!");
