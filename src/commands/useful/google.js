@@ -3,7 +3,7 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 module.exports = {
   name: "google",
   description: "",
-  category: "fun",
+  category: "useful",
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
