@@ -29,9 +29,8 @@ module.exports = {
         `, true)
       .addField(lang.BOT.USED_APIS,
       `
-      [NekoBot.xyz](https://nekobot.xyz/api)
+      [NekoBot API](https://nekobot.xyz/api)
       [Some Random API](https://some-random-api.ml)
-      [LMGTFY](https://lmgtfy.app)
       `, true)
       .addField(lang.BOT.VOTE,
       `
