@@ -60,5 +60,9 @@ module.exports = {
     PROCESSING: "Секунду...",
     FEEDBACK_NEW: "Новый отзыв!",
     FEEDBACK_SENT: "Отзыв был успешно отправлен!",
+    EVAL: "Выполнение кода",
+    EVAL_TYPE: "Тип",
+    EVAL_INPUT: "Ввод",
+    EVAL_OUTPUT: "Вывод",
   },
 };

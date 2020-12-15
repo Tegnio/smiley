@@ -60,5 +60,9 @@ module.exports = {
     PROCESSING: "One second...",
     FEEDBACK_NEW: "New feedback!",
     FEEDBACK_SENT: "The feedback was successfully sent!",
+    EVAL: "Eval",
+    EVAL_TYPE: "Type",
+    EVAL_INPUT: "Input",
+    EVAL_OUTPUT: "Output",
   },
 };
