@@ -5,10 +5,6 @@ module.exports = {
     NONE: "None",
     NOT_SPECIFIED: "Not specified",
     SERVER_PREFIX: "Server prefix",
-    NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
-    USER_BLACKLISTED: "You've been blacklisted from using this bot.",
-    COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
-    BOT_NO_PERMS: "In order to work properly, I need to have permissions shown below. Please make sure I have them all."
   },
   BOT: {
     ABOUT: "About smiley",
@@ -23,6 +19,12 @@ module.exports = {
     ADD: "Add me to your server!",
     USED_APIS: "Used APIs",
     VOTE: "Vote for me!",
+    NO_PERMS: "It seems to me that I don't have some permissions in order to work properly.\nPlease kick & re-invite me using this link:\n{link}",
+  },
+  MEMBER: {
+    COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
+    BLACKLISTED: "You've been blacklisted from using this bot.",
+    NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
   },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",

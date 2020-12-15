@@ -56,7 +56,7 @@ module.exports = {
       );
 
       if (isBlacklisted) {
-        return message(lang.GLOBAL.USER_BLACKLISTED);
+        return message(lang.MEMBER.BLACKLISTED);
       }
     }
 
@@ -126,7 +126,7 @@ module.exports = {
 
           if (now < expTime) {
             const timeleft = (expTime - now) / 1000;
-            return message.channel.send(lang.GLOBAL.COOLDOWN
+            return message.channel.send(lang.MEMBER.COOLDOWN
               .replace("{cooldown}", timeleft.toFixed(2))
               .replace("{cmd}", cmd.name));
           }
