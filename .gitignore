@@ -1,3 +1,4 @@
 /node_modules/
-package-lock.json
 /src/drafts/
+/src/emojis/
+package-lock.json
