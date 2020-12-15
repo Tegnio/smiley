@@ -15,7 +15,7 @@ module.exports = {
     }
 
     const embed = BaseEmbed(message)
-    .setTitle(question));
+    .setTitle(question);
 
     const sendMessage = await message.channel.send(embed);
 
