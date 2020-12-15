@@ -9,7 +9,7 @@ module.exports = {
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const member = bot.findMember(message, args, true);
-    const username = member.user.username;
+    const username = await encodeURIComponent(member.user.username);
     const image = member.user.displayAvatarURL({ size: 512, format: "jpeg", dynamic: true});
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const data = await fetch(`https://nekobot.xyz/api/imagegen?type=captcha&url=${image}&username=${username}`)
