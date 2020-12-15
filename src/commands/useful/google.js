@@ -4,7 +4,7 @@ module.exports = {
   name: "google",
   description: "",
   category: "useful",
-  cooldown: 2,
+  cooldown: 5,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const query = encodeURIComponent(args.join(" "));
