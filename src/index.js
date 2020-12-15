@@ -2,6 +2,8 @@ require("./utils/database");
 const { Collection, Client } = require("discord.js");
 const { token } = require("../config.json");
 const { GiveawaysManager } = require("discord-giveaways");
+const { NekoBot } = require("nekobot-api");
+const nba = new NekoBot();
 const { findMember, getGuildLang, sendErrorLog } = require("./utils/functions");
 
 const bot = new Client({
