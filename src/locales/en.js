@@ -27,6 +27,10 @@ module.exports = {
     BLACKLISTED: "You've been blacklisted from using this bot.",
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
   },
+  GUILD: {
+    NOT_FOUND: "Server not found.",
+    LEFT: "I've successfully left the **{guild}** guild.",
+  },
   IMAGE: {
     FAILED_TO_LOAD: "Click here if the image failed to load.",
   },
