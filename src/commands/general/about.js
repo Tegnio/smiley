@@ -5,7 +5,7 @@ module.exports = {
   name: "about",
   description: "",
   category: "general",
-  aliases: ["ping"],
+  aliases: ["bot", "ping"],
   cooldown: 2,
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
