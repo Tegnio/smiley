@@ -7,7 +7,7 @@ module.exports = {
   description: "",
   category: "settings",
   cooldown: 10,
-  memberPermissions: ["MANAGE_GUILD"]
+  memberPermissions: ["MANAGE_GUILD"],
   async execute(bot, message, args) {
     const prefix = args[0];
     const lang = await bot.getGuildLang(message.guild.id);
