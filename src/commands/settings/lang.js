@@ -20,6 +20,13 @@ module.exports = {
 if (!language) {
   return message.channel.send(lang.LANG.PROVIDE_LANG);
 }
+if(language === 'list') {
+  return message.channel.send(
+    `${lang.LANG.LIST} ${languages
+      .map((l) => `\`${l}\``)
+      .join(", ")}`
+  );
+}
 if (!languages.includes(language)) {
   return message.channel.send(
     `${lang.LANG.NOT_AVAILABLE} ${languages

@@ -33,6 +33,7 @@ module.exports = {
   LANG: {
     PROVIDE_LANG: "Пожалуйста, укажите язык!",
     NOT_AVAILABLE: "Этот язык недоступен. Доступные языки:",
+    LIST: "Доступные языки:",
     UPDATED: "Язык успешно обновлен на **{language}**!"
   },
   TIME: {
@@ -48,6 +49,7 @@ module.exports = {
     GENERAL: "Основное",
     FUN: "Весёлости",
     NSFW: "NSFW",
+    USEFUL: "Полезности",
     SETTINGS: "Настройки",
     NSFW_ONLY: "Этот канал не предназначен для такого контента!",
   },

@@ -33,6 +33,7 @@ module.exports = {
   LANG: {
     PROVIDE_LANG: "Please provide a language!",
     NOT_AVAILABLE: "This language is not available. Available languages:",
+    LIST: "Available languages:",
     UPDATED: "Successfully updated language to **{language}**!",
   },
   TIME: {
@@ -44,12 +45,13 @@ module.exports = {
   },
   HELP: {
     HELP: "List of commands",
-    HELP_DESC: "Use `{prefix}` as the server prefix.",
+    HELP_DESC: "Use `{prefix}` as a server prefix.",
     GENERAL: "General",
     FUN: "Fun",
     NSFW: "NSFW",
+    USEFUL: "Useful",
     SETTINGS: "Settings",
-    NSFW_ONLY: "This channel is not meant for that kind of content!",
+    NSFW_ONLY: "This channel is not suitable for this kind of content!",
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Search",
