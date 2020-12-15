@@ -5,6 +5,7 @@ module.exports = {
     NONE: "Нет",
     NOT_SPECIFIED: "Не указано",
     SERVER_PREFIX: "Серверный префикс",
+    PROVIDE_ARGS: "Пожалуйста, предоставьте аргументы!",
   },
   BOT: {
     ABOUT: "О smiley",
@@ -55,5 +56,7 @@ module.exports = {
     PREFIX_UPDATE: "Используйте `{cmd}` для установки нового префикса",
     PREFIX_UPDATED: "Серверный префикс был успешно обновлен на `{prefix}`.\nВы сможете упомянуть меня позже, если его забудете.",
     PROCESSING: "Секунду...",
+    FEEDBACK_NEW: "Новый отзыв!",
+    FEEDBACK_SENT: "Отзыв был успешно отправлен!",
   },
 };

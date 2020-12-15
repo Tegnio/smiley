@@ -5,6 +5,7 @@ module.exports = {
     NONE: "None",
     NOT_SPECIFIED: "Not specified",
     SERVER_PREFIX: "Server prefix",
+    PROVIDE_ARGS: "Please provide some arguments!",
   },
   BOT: {
     ABOUT: "About smiley",
@@ -54,6 +55,8 @@ module.exports = {
     GOOGLE_SEARCH: "Google Search",
     PREFIX_UPDATE: "Use `{cmd}` to set a new prefix",
     PREFIX_UPDATED: "The server prefix has been successfully updated to `{prefix}`.\nYou can mention me later if you forget it.",
-    PROCESSING: "Wait a moment...",
+    PROCESSING: "One second...",
+    FEEDBACK_NEW: "New feedback!",
+    FEEDBACK_SENT: "The feedback was successfully sent!",
   },
 };

@@ -3,8 +3,8 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "feedback",
-  description: "Give feedback about the bot",
-  category: "util",
+  description: "",
+  category: "general",
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const feedback = args.join(" ");
@@ -14,11 +14,11 @@ module.exports = {
     if (!feedBackChannelId || feedBackChannelId === "") return;
 
     const embed = BaseEmbed(message)
-      .setTitle(lang.UTIL.NEW_FEEDBACK)
+      .setTitle(lang.OTHER.FEEDBACK_NEW)
       .setDescription(feedback);
 
     bot.channels.cache.get(feedBackChannelId).send(embed);
 
-    message.channel.send(lang.UTIL.FEEDBACK_SEND);
+    message.channel.send(lang.OTHER.FEEDBACK_SENT);
   },
 };
