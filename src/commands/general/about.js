@@ -34,7 +34,9 @@ module.exports = {
       `, true)
       .addField(lang.BOT.VOTE,
       `
-      [Bots.SD.C](https://bots.server-discord.com/781179810700984330)
+      [Bots S-D.C](https://bots.server-discord.com/781179810700984330)
+      [BotiCord](https://boticord.top/bot/781179810700984330)
+      [Top Bots List](https://top-bots.xyz/bot/781179810700984330)
       `, true);
 
     message.channel.send(embed);
