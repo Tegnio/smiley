@@ -143,7 +143,7 @@ module.exports = {
       sendErrorLog(bot, e, "error", message.content);
       const embed = BaseEmbed(message)
         .setTitle(lang.GLOBAL.ERROR)
-        .setDescription(e);
+        .setDescription(`\`\`\`js${e}\`\`\``);
 
       message.channel.send(embed);
     }
