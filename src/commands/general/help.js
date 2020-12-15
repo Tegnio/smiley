@@ -84,6 +84,10 @@ module.exports = {
       .filter(({ category }) => category === "nsfw")
       .map(({ name }) => `\`${name}\``)
       .join(", ") || lang.GLOBAL.NOTHING;
+    const usefulCmds = commands
+      .filter(({ category }) => category === "useful")
+      .map(({ name }) => `\`${name}\``)
+      .join(", ") || lang.GLOBAL.NOTHING;
     const settingsCmds = commands
       .filter(({ category }) => category === "settings")
       .map(({ name }) => `\`${name}\``)
@@ -98,6 +102,7 @@ module.exports = {
       embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
     }
     embed
+      .addField(lang.HELP.USEFUL, usefulCmds)
       .addField(lang.HELP.SETTINGS, settingsCmds)
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);
