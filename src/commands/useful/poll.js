@@ -5,7 +5,6 @@ module.exports = {
   description: "",
   category: "useful",
   cooldown: 5,
-  memberPermissions: "MANAGE_MESSAGES",
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const question = args.join(" ");
