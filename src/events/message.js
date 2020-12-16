@@ -71,14 +71,12 @@ module.exports = {
 
         if (disabledCommands !== null && disabledCommands.length > 0) {
           if (disabledCommands?.includes(cmd.name)) {
-            return message.channel.send(
-              "That command was disabled for this guild"
-            );
+            return message.channel.send(lang.OTHER.CMD_DISABLED);
           }
         }
 
         if (cmd.ownerOnly && !owners.includes(message.author.id)) {
-          return message.reply("This command can only be used by the owners!");
+          return message.channel.send(lang.HELP.OWNER_ONLY);
         }
 
         // botPermissions

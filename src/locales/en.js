@@ -56,6 +56,7 @@ module.exports = {
     USEFUL: "Useful",
     SETTINGS: "Settings",
     NSFW_ONLY: "This channel is not suitable for this kind of content!",
+    OWNER_ONLY: "This command can be used only by the owner!",
     CATEGORY: "Category",
     ALIASES: "Aliases",
     COOLDOWN: "Cooldown",
@@ -74,5 +75,6 @@ module.exports = {
     EVAL_TYPE: "Type",
     EVAL_INPUT: "Input",
     EVAL_OUTPUT: "Output",
+    CMD_DISABLED: "This command was disabled on this server.",
   },
 };

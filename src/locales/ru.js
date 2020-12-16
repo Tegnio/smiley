@@ -56,6 +56,7 @@ module.exports = {
     USEFUL: "Полезности",
     SETTINGS: "Настройки",
     NSFW_ONLY: "Этот канал не предназначен для такого контента!",
+    OWNER_ONLY: "Эту команду может использовать только владелец!",
     CATEGORY: "Категория",
     ALIASES: "Алиасы",
     COOLDOWN: "Кулдаун",
@@ -74,5 +75,6 @@ module.exports = {
     EVAL_TYPE: "Тип",
     EVAL_INPUT: "Ввод",
     EVAL_OUTPUT: "Вывод",
+    CMD_DISABLED: "Эта команда была выключена на данном сервере.",
   },
 };
