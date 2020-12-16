@@ -76,5 +76,6 @@ module.exports = {
     EVAL_INPUT: "Ввод",
     EVAL_OUTPUT: "Вывод",
     CMD_DISABLED: "Эта команда была выключена на данном сервере.",
+    CALC: "Калькулятор",
   },
 };

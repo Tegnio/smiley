@@ -76,5 +76,6 @@ module.exports = {
     EVAL_INPUT: "Input",
     EVAL_OUTPUT: "Output",
     CMD_DISABLED: "This command was disabled on this server.",
+    CALC: "Calculator",
   },
 };
