@@ -13,7 +13,7 @@ module.exports = {
 
     const embed = BaseEmbed(message)
       .setTitle(lang.IMAGE.FAILED_TO_LOAD)
-      .setDescription(avatar)
+      .setURL(avatar)
       .setImage(avatar);
 
     message.channel.send(embed);
