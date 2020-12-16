@@ -6,6 +6,7 @@ module.exports = {
   description: "",
   category: "useful",
   aliases: ["math"],
+  cooldown: 5,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     try {
