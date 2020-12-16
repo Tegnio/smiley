@@ -56,6 +56,12 @@ module.exports = {
     USEFUL: "Useful",
     SETTINGS: "Settings",
     NSFW_ONLY: "This channel is not suitable for this kind of content!",
+    CATEGORY: "Category",
+    ALIASES: "Aliases",
+    COOLDOWN: "Cooldown",
+    USAGE: "Usage",
+    BOT_PERMS: "Bot Permissions",
+    MEMBER_PERMS: "Member Permissions",
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Search",

@@ -56,6 +56,12 @@ module.exports = {
     USEFUL: "Полезности",
     SETTINGS: "Настройки",
     NSFW_ONLY: "Этот канал не предназначен для такого контента!",
+    CATEGORY: "Категория",
+    ALIASES: "Алиасы",
+    COOLDOWN: "Кулдаун",
+    USAGE: "Использование",
+    BOT_PERMS: "Права для бота",
+    MEMBER_PERMS: "Права для участника",
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Поиск",

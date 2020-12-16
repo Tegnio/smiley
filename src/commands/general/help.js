@@ -58,12 +58,12 @@ module.exports = {
         : [...cmd.botPermissions, "SEND_MESSAGES"].map((p) => p);
 
       const embed = BaseEmbed(message)
-        .setTitle(`${lang.HELP.COMMAND}: ${cmd.name}`)
+        .setTitle(`\`${cmd.name}\``)
+        .setDescription(lang.HELP.DESCRIPTION, `${lang.DESCRIPTION.toCapitalize(cmd.name)} || ${lang.GLOBAL.NOT_SPECIFIED}`)
+        .addField(lang.HELP.CATEGORY, lang.HELP.toCapitalize(cmd.category), true)
         .addField(lang.HELP.ALIASES, aliases, true)
-        .addField(lang.HELP.COOLDOWN, `${cooldown}`, true)
-        .addField(lang.HELP.CATEGORY, cmd.category, true)
-        .addField(lang.HELP.USAGE, cmd.usage ? `${prefix}${cmd.usage}` : lang.GLOBAL.NOT_SPECIFIED)
-        .addField(lang.HELP.DESCRIPTION, cmd.description ? cmd.description : lang.GLOBAL.NOT_SPECIFIED)
+        .addField(lang.HELP.COOLDOWN, cooldown, true)
+        .addField(lang.HELP.USAGE, `${prefix}${lang.USAGE.toCapitalize(cmd.name)} || ${lang.GLOBAL.NOT_SPECIFIED}`)
         .addField(lang.HELP.BOT_PERMS, botPerms, true)
         .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
 
