@@ -3,7 +3,7 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 module.exports = {
   name: "avatar",
   description: "",
-  category: "util",
+  category: "useful",
   cooldown: 5,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
