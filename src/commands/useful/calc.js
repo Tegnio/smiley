@@ -18,11 +18,11 @@ module.exports = {
       const embed = BaseEmbed(message)
         .setTitle(lang.OTHER.CALC)
         .addField(
-          `${lang.BOT_OWNER.EVAL_INPUT}:`,
+          `${lang.OTHER.EVAL_INPUT}:`,
           `\`\`\`js\n${args.join(" ")}\`\`\``
         )
         .addField(
-          `${lang.BOT_OWNER.EVAL_OUTPUT}:`,
+          `${lang.OTHER.EVAL_OUTPUT}:`,
           `\`\`\`js\n${calculation}\`\`\``
         );
 
