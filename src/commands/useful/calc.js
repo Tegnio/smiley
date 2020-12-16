@@ -24,7 +24,8 @@ module.exports = {
         .addField(
           `${lang.OTHER.EVAL_OUTPUT}:`,
           `\`\`\`js\n${calculation}\`\`\``
-        );
+        )
+        .setImage('https://i.imgur.com/o1hFdwE.png');
 
       message.channel.send(embed);
     } catch (e) {
