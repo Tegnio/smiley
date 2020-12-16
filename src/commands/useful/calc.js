@@ -11,6 +11,10 @@ module.exports = {
     try {
       const calculation = math.evaluate(args.join(" "));
 
+      if(!calculation) {
+        return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
+      }
+
       const embed = BaseEmbed(message)
         .setTitle(lang.OTHER.CALC)
         .addField(
