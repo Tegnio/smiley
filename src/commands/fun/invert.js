@@ -10,7 +10,7 @@ module.exports = {
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png", dynamic: true });
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const data = `https://some-random-api.ml/canvas/invert?&avatar=${image}`;
+    const data = `https://api.no-api-key.com/api/v2/invert?image=${image}`;
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
