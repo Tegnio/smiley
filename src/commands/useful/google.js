@@ -15,8 +15,8 @@ module.exports = {
     }
     if(query.length > 256) {
       return message.channel.send(lang.GLOBAL.LONG_ARGS
-        .replace("{limit}", "256")
-        .replace("{length}", query.length));
+        .replace("{length}", query.length)
+        .replace("{limit}", "256"));
     }
 
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);

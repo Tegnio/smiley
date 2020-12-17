@@ -14,8 +14,8 @@ module.exports = {
     }
     if(question.length > 256) {
       return message.channel.send(lang.GLOBAL.LONG_ARGS
-        .replace("{limit}", "256")
-        .replace("{length}", question.length));
+        .replace("{length}", question.length)
+        .replace("{limit}", "256"));
     }
 
     const embed = BaseEmbed(message)
