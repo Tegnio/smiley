@@ -11,13 +11,11 @@ module.exports = {
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png", dynamic: true });
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const data = await fetch(`https://nekobot.xyz/api/imagegen?type=jpeg&url=${image}`).then((res) =>
-      res.json()
-    );
+    const data = `https://useless-api--vierofernando.repl.co/respects?image=${image}`;
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
-    .setURL(data.message)
+    .setURL(data)
     .setImage(data.message);
 
     setTimeout(() => {
