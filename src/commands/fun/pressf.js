@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
-  name: "jpeg",
+  name: "pressf",
   description: "",
   category: "fun",
   cooldown: 2,
@@ -11,12 +11,14 @@ module.exports = {
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png", dynamic: true });
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const data = `https://useless-api--vierofernando.repl.co/respects?image=${image}`;
+    const data = await fetch(`https://nekobot.xyz/api/imagegen?type=jpeg&url=${image}`).then((res) =>
+      res.json()
+    );
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
-    .setURL(data)
-    .setImage(data);
+    .setURL(data.message)
+    .setImage(data.message);
 
     setTimeout(() => {
       message.channel.send(embed);
