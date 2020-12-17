@@ -11,6 +11,13 @@ module.exports = {
     const url = `https://lmgtfy.app/?q=${query}`;
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
 
+    if (!query) {
+      return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
+    }
+    if(query.length > 256) {
+      return message.channel.send(lang.GLOBAL.LONG_ARGS.replace("{limit}", "256"));
+    }
+
     const embed = BaseEmbed(message)
     .setAuthor(lang.OTHER.GOOGLE_SEARCH, `https://i.imgur.com/Ek1Qm3w.png`)
     .setTitle(decodeURIComponent(query))
