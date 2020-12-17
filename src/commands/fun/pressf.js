@@ -16,7 +16,7 @@ module.exports = {
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
     .setURL(data)
-    .setImage(data.message);
+    .setImage(data);
 
     setTimeout(() => {
       message.channel.send(embed);
