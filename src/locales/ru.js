@@ -6,6 +6,7 @@ module.exports = {
     NOT_SPECIFIED: "Не указано",
     SERVER_PREFIX: "Серверный префикс",
     PROVIDE_ARGS: "Пожалуйста, предоставьте аргументы!",
+    LONG_ARGS: "Предоставленные аргументы слишком длинны! (Лимит: {limit})",
   },
   BOT: {
     ABOUT: "О smiley",

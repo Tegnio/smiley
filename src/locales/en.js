@@ -6,6 +6,7 @@ module.exports = {
     NOT_SPECIFIED: "Not specified",
     SERVER_PREFIX: "Server prefix",
     PROVIDE_ARGS: "Please provide some arguments!",
+    LONG_ARGS: "The arguments provided are too long! (Limit: {limit})",
   },
   BOT: {
     ABOUT: "About smiley",
