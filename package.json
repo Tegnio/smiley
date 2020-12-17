@@ -14,7 +14,6 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "bufferutil": "^4.0.2",
     "chalk": "^4.1.0",
     "discord-giveaways": "^4.2.1",
     "discord.js": "^12.5.1",
