@@ -14,9 +14,11 @@ module.exports = {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
     if(query.length > 256) {
-      return message.channel.send(lang.GLOBAL.LONG_ARGS.replace("{limit}", "256"));
+      return message.channel.send(lang.GLOBAL.LONG_ARGS
+        .replace("{limit}", "256")
+        .replace("{length}", query.length));
     }
-    
+
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const embed = BaseEmbed(message)
     .setAuthor(lang.OTHER.GOOGLE_SEARCH, `https://i.imgur.com/Ek1Qm3w.png`)
