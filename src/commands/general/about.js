@@ -41,7 +41,6 @@ module.exports = {
       [Void Bots](https://voidbots.net/bot/781179810700984330)
       [BotiCord](https://boticord.top/bot/781179810700984330)
       [⌛ Top.gg](https://top.gg/bot/781179810700984330)
-      [⌛ YABL](https://yabl.xyz/bot/781179810700984330)
       `, true);
 
     message.channel.send(embed);
