@@ -39,6 +39,8 @@ module.exports = {
       [Bots S-D.C](https://bots.server-discord.com/781179810700984330)
       [BotiCord](https://boticord.top/bot/781179810700984330)
       [Top Bots List](https://top-bots.xyz/bot/781179810700984330)
+      [⌛ Discord Bots](https://discord.bots.gg/bots/781179810700984330)
+      [⌛ Top.gg](https://top.gg/bot/781179810700984330)
       `, true);
 
     message.channel.send(embed);
