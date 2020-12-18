@@ -41,6 +41,8 @@ module.exports = {
       [BotiCord](https://boticord.top/bot/781179810700984330)
       [⌛ Discord Bots](https://discord.bots.gg/bots/781179810700984330)
       [⌛ Top.gg](https://top.gg/bot/781179810700984330)
+      [⌛ VoidBots](https://voidbots.net/bot/781179810700984330)
+      [⌛ YABL])(https://yabl.xyz/bot/781179810700984330)  
       `, true);
 
     message.channel.send(embed);
