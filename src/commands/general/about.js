@@ -18,7 +18,7 @@ module.exports = {
       .setAuthor(lang.BOT.ABOUT, avatar)
       .addField(lang.BOT.DEVELOPER, `Tegnio#6882`, true)
       .addField(lang.BOT.UPTIME, uptime, true)
-      .addField(lang.BOT.LATENCY, `${Math.round(bot.ws.ping / 4).toFixed(0)} ${lang.TIME.MILLISECONDS}`, true)
+      .addField(lang.BOT.LATENCY, `${Math.round(bot.ws.ping / 2).toFixed(1)} ${lang.TIME.MILLISECONDS}`, true)
       .addField(lang.BOT.SERVERS, bot.guilds.cache.size, true)
       .addField(lang.BOT.USERS, bot.users.cache.size, true)
       .addField(lang.BOT.COMMANDS, bot.commands.size, true)
