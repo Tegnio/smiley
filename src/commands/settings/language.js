@@ -7,10 +7,11 @@ const languages = fs
   .map((la) => la.slice(0, -3));
 
 module.exports = {
-  name: "lang",
+  name: "language",
   description: "",
   category: "settings",
   cooldown: 10,
+  aliases: ["lang"],
   memberPermissions: ["MANAGE_GUILD"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
