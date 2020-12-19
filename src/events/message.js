@@ -38,6 +38,10 @@ module.exports = {
     if (!prefix.test(message.content) || message.author.bot || userId === bot.user.id)
       return;
 
+    if(message.channel.id === '786916686221410364' || '786918267067039804') {
+      return message.channel.send('<#786916715320705055>')
+    }
+
     const [, matchedPrefix] = message.content.match(prefix);
     const args = message.content
       .slice(matchedPrefix.length)
