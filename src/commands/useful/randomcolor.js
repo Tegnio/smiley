@@ -3,7 +3,7 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 module.exports = {
   name: "randomcolor",
   description: "",
-  category: "util",
+  category: "useful",
   cooldown: 2,
   aliases: ["rcolor", "rclr"],
   execute(bot, message) {
