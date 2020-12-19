@@ -4,7 +4,7 @@ module.exports = {
   name: "avatar",
   description: "",
   category: "useful",
-  cooldown: 5,
+  cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const member = bot.findMember(message, args, true);
