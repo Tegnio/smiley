@@ -22,10 +22,10 @@ module.exports = {
 
     if (user?.message === "Not Found") {
       return message.channel.send(lang.OTHER.GH_NOT_FOUND)
-        .then(() => msg.delete());
+        .then(() => wait_msg.delete());
     }
 
-    msg.delete();
+    wait_msg.delete();
 
     const twitter = user.twitter_username
       ? `[@${user.twitter_username}](https://twitter.com/${user.twitter_username})`
