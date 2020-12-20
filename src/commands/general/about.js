@@ -12,7 +12,7 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
     const uptime = moment
       .duration(bot.uptime)
-      .format(`D [${lang.TIME.DAYS}] h [${lang.TIME.HOURS}] m [${lang.TIME.MINUTES}] s [${lang.TIME.SECONDS}]`);
+      .format(`D [${lang.TIME.DAYS}]\nh [${lang.TIME.HOURS}]\nm [${lang.TIME.MINUTES}]\ns [${lang.TIME.SECONDS}]`);
 
     const embed = BaseEmbed(message)
       .setAuthor(lang.BOT.ABOUT, avatar)

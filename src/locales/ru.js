@@ -42,10 +42,10 @@ module.exports = {
     UPDATED: "Язык успешно обновлен на **{language}**!"
   },
   TIME: {
-    DAYS: "дн.",
-    HOURS: "ч.",
-    MINUTES: "мин.",
-    SECONDS: "сек.",
+    DAYS: "дней",
+    HOURS: "часов",
+    MINUTES: "минут",
+    SECONDS: "секунд",
     MILLISECONDS: "мс"
   },
   HELP: {

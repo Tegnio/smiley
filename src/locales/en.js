@@ -43,9 +43,9 @@ module.exports = {
   },
   TIME: {
     DAYS: "days",
-    HOURS: "hrs",
-    MINUTES: "mins",
-    SECONDS: "secs",
+    HOURS: "hours",
+    MINUTES: "minutes",
+    SECONDS: "seconds",
     MILLISECONDS: "ms",
   },
   HELP: {
