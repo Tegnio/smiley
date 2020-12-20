@@ -8,6 +8,7 @@ const {
 const { owners } = require("../../config.json");
 const BaseEmbed = require("../modules/BaseEmbed");
 const Blacklist = require("../models/Blacklisted.model");
+const Logger = require("../modules/Logger");
 
 module.exports = {
   name: "message",
@@ -38,6 +39,7 @@ module.exports = {
     if (!prefix.test(message.content) || message.author.bot || userId === bot.user.id)
       return;
 
+
     const [, matchedPrefix] = message.content.match(prefix);
     const args = message.content
       .slice(matchedPrefix.length)
@@ -48,6 +50,10 @@ module.exports = {
     if (message.mentions.has(bot.user.id) && !command) {
 
       message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
+    }
+
+    if(message.content.has(command)) {
+      Logger.log("commands", `${message.author.tag}: ${command}`)
     }
 
     if (blacklistedUsers) {
