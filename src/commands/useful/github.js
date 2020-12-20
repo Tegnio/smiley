@@ -36,13 +36,13 @@ module.exports = {
 
     const embed = BaseEmbed(message)
       .setTitle(user.login)
+      .setURL(user.html_url)
       .addField("Twitter", twitter, true)
       .addField(lang.OTHER.GH_FOLLOWING, user.following, true)
       .addField(lang.OTHER.GH_FOLLOWERS, user.followers, true)
       .addField(lang.OTHER.GH_WEBSITE, website, true)
       .addField(lang.OTHER.GH_LOCATION, location, true)
-      .addField(lang.OTHER.URL, user.html_url)
-      .setDescription(`${lang.OTHER.GH_BIO}: ${bio}`)
+      .addField(lang.OTHER.GH_BIO, bio)
       .setThumbnail(user.avatar_url);
 
     message.channel.send(embed);
