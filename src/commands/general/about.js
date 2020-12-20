@@ -12,11 +12,14 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
     const uptime = moment
       .duration(bot.uptime)
-      .format(`D [${lang.TIME.DAYS}]\nh [${lang.TIME.HOURS}]\nm [${lang.TIME.MINUTES}]\ns [${lang.TIME.SECONDS}]`);
+      .format(`D [${lang.TIME.DAYS}] h [${lang.TIME.HOURS}] m [${lang.TIME.MINUTES}] s [${lang.TIME.SECONDS}]`);
 
     const embed = BaseEmbed(message)
       .setAuthor(lang.BOT.ABOUT, avatar)
-      .addField(lang.BOT.DEVELOPER, `Tegnio#6882`, true)
+      .addField(lang.BOT.DEVELOPER,
+        `
+        [Tegnio#6882](https://tegnio.carrd.co/)
+        `, true)
       .addField(lang.BOT.UPTIME, uptime, true)
       .addField(lang.BOT.LATENCY, `${Math.round(bot.ws.ping / 2).toFixed(1)} ${lang.TIME.MILLISECONDS}`, true)
       .addField(lang.BOT.SERVERS, bot.guilds.cache.size, true)
