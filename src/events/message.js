@@ -52,10 +52,6 @@ module.exports = {
       message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
     }
 
-    if(message.content.startsWith(serverPrefix + command)) {
-      Logger.log("commands", `${message.author.tag}: ${serverPrefix}${command}`)
-    }
-
     if (blacklistedUsers) {
       const isBlacklisted = blacklistedUsers.find(
         (u) => u.user_id === message.author.id

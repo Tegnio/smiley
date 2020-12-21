@@ -7,14 +7,24 @@ module.exports = {
   cooldown: 2,
   aliases: ["clr"],
   execute(bot, message) {
-    const color = Math.floor(Math.random()*16777215).toString(16);
-    const url = `https://api.no-api-key.com/api/v2/color?hex=${color}`;
+    const color = args[0];
+    let rcolor = Math.floor(Math.random()*16777215).toString(16);
+    const url = `https://api.no-api-key.com/api/v2/color?hex=`;
 
-    const embed = BaseEmbed(message)
-      .setColor(`#${color}`)
-      .setThumbnail(url)
+    if(!color) {
+      const embed = BaseEmbed(message)
+      .setColor(rcolor)
+      .setThumbnail(url + rcolor)
+      .setTitle(`#${rcolor}`);
+
+      message.channel.send(embed);
+    } else {
+      const embed = BaseEmbed(message)
+      .setColor(color)
+      .setThumbnail(url + color)
       .setTitle(`#${color}`);
 
-    message.channel.send(embed);
+      message.channel.send(embed);
+    };
   },
 };
