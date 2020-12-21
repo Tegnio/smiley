@@ -28,7 +28,7 @@ if(language === 'list') {
       .join(", ")}`
   );
 }
-if (!languages.includes(language)) {
+if(!languages.includes(language)) {
   return message.channel.send(
     `${lang.LANG.NOT_AVAILABLE} ${languages
       .map((l) => `\`${l}\``)
