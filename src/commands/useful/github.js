@@ -16,7 +16,7 @@ module.exports = {
     }
 
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const url = `https://api.github.com/users/${username}`;
+    const url = `https://api.github.com/users/${encodeURIComponent(username)}`;
     const result = await fetch(url).then((res) => res.json());
     const user = result;
 
