@@ -11,14 +11,12 @@ module.exports = {
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png" });
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const data = await fetch(`https://api.no-api-key.com/api/v2/smrt?image=${image}`).then((res) =>
-      res.json()
-    ).then(console.log);
+    const data = `https://api.no-api-key.com/api/v2/smrt?image=${image}`;
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
     .setURL(data)
-    .setImage(data.message);
+    .setImage(data);
 
     setTimeout(() => {
       message.channel.send(embed);
