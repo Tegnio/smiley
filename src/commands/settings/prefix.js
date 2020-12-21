@@ -20,10 +20,10 @@ module.exports = {
 
     if (message.author.id === ownerId) {
       setPrefix(message, prefix);
-      message.channel.send(lang.OTHER.PREFIX_UPDATED.replace("{prefix}", prefix));
+      message.react("✅");
     } else if (message.member.permissions.has(["MANAGE_GUILD"])) {
       setPrefix(message, prefix);
-      message.channel.send(lang.OTHER.PREFIX_UPDATED.replace("{prefix}", prefix));
+      message.react("✅");
     } else {
       return message.channel.send(`<:err:786969738030612547> ${lang.MEMBER.NO_PERMS}`);
     }

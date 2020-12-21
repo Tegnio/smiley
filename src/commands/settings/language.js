@@ -36,11 +36,7 @@ if(!languages.includes(language)) {
   );
 }
   updateItem("locale", language, guildId);
-  const wait_msg = await message.channel.send(lang.OTHER.PROCESSING)
-  setTimeout(() => {
-    message.channel.send(lang.LANG.UPDATED.replace("{language}", language));
-    wait_msg.delete();
-  }, 100);
+  message.react("✅")
 
 async function updateItem(type, item, guildId) {
   await updateGuildById(guildId, {
