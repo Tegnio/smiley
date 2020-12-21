@@ -6,7 +6,7 @@ module.exports = {
   category: "useful",
   cooldown: 2,
   aliases: ["clr"],
-  async execute(bot, message) {
+  async execute(bot, message, args) {
     const rcolor = Math.floor(Math.random()*16777215).toString(16);
     const url = `https://api.no-api-key.com/api/v2/color?hex=`;
     const color = args[0];
