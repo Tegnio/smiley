@@ -21,7 +21,9 @@ module.exports = {
 
       message.channel.send(embed);
     } else if(color.length > 6) {
-        return message.channel.send(lang.GLOBAL.LONG_ARGS.replace("{limit}", "6"));
+        return message.channel.send(lang.GLOBAL.LONG_ARGS
+          .replace("{length}", color.length)
+          .replace("{limit}", "6"));
     } else {
         const embed = BaseEmbed(message)
         .setColor(color)
