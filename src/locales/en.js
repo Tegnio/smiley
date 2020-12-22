@@ -82,6 +82,7 @@ module.exports = {
     GH_FOLLOWERS: "Followers",
     GH_WEBSITE: "Website",
     GH_LOCATION: "Location",
+    GH_JOB: "Employment",
     GH_BIO: "Bio",
     URL: "URL",
     CMD_DISABLED: "This command was disabled on this server.",
