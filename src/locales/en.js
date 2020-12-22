@@ -4,6 +4,7 @@ module.exports = {
     NOTHING: "There is nothing here. Come back later.",
     NONE: "None",
     NOT_SPECIFIED: "Not specified",
+    NOT_AVAILABLE: "Not available",
     SERVER_PREFIX: "Server prefix",
     PROVIDE_ARGS: "Please provide some arguments!",
     LONG_ARGS: "The arguments provided are too long! ({length} > {limit})",

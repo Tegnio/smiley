@@ -4,6 +4,7 @@ module.exports = {
     NOTHING: "Здесь пока что ничего нет. Возвращайтесь позже.",
     NONE: "Нет",
     NOT_SPECIFIED: "Не указано",
+    NOT_AVAILABLE: "Недоступно",
     SERVER_PREFIX: "Серверный префикс",
     PROVIDE_ARGS: "Пожалуйста, предоставьте аргументы!",
     LONG_ARGS: "Предоставленные аргументы слишком длинны! ({length} > {limit})",
