@@ -22,6 +22,7 @@ module.exports = {
     .setTitle(question);
 
     const sendMessage = await message.channel.send(embed);
+    message.delete();
 
     sendMessage.react("👍");
     sendMessage.react("👎");
