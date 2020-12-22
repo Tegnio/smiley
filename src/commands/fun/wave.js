@@ -11,7 +11,7 @@ module.exports = {
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png" });
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
-    const data = `https://useless-api--vierofernando.repl.co/wave?image=${image}&amount=${Math.floor(Math.random() * 10)}`;
+    const data = `https://useless-api--vierofernando.repl.co/wave?image=${image}&amount=${Math.floor(Math.random() * 9 + 1)}`;
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
