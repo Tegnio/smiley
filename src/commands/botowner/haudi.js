@@ -6,13 +6,13 @@ module.exports = {
   description: "",
   category: "botowner",
   ownerOnly: true,
-  async execute(bot, message, args) {
+  async execute(bot, message) {
     message.react("✅");
     setInterval(() => {
-      fetch('https://senko-info.ga/api/roflan/haudi').then((res) =>
+      const data = await fetch('https://senko-info.ga/api/roflan/haudi').then((res) =>
         res.json());
       bot.channels.cache.get('790881502593548328')
-      .send(res.text)
+      .send(data.text)
     }, 15000);
   },
 };
