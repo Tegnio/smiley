@@ -7,12 +7,11 @@ module.exports = {
   category: "botowner",
   ownerOnly: true,
   async execute(bot, message, args) {
-    const data = await fetch('https://senko-info.ga/api/roflan/haudi').then((res) =>
-      res.json());
-
     setInterval(() => {
+      fetch('https://senko-info.ga/api/roflan/haudi').then((res) =>
+        res.json());
       bot.channels.cache.get('790881502593548328')
-      .send(data.text)
+      .send(res.text)
     }, 15000);
   },
 };
