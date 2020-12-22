@@ -41,9 +41,10 @@ module.exports = {
       .addField("Twitter", twitter, true)
       .addField(lang.OTHER.GH_FOLLOWING, user.following, true)
       .addField(lang.OTHER.GH_FOLLOWERS, user.followers, true)
-      .addField(lang.OTHER.GH_WEBSITE, website, true)
+      .addField(lang.OTHER.GH_REPOS, user.public_repos, true)
       .addField(lang.OTHER.GH_LOCATION, location, true)
       .addField(lang.OTHER.GH_JOB, job, true)
+      .addField(lang.OTHER.GH_WEBSITE, website)
       .addField(lang.OTHER.GH_BIO, bio)
       .setThumbnail(user.avatar_url);
 
