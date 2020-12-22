@@ -7,6 +7,7 @@ module.exports = {
   category: "botowner",
   ownerOnly: true,
   async execute(bot, message, args) {
+    message.react("✅");
     setInterval(() => {
       fetch('https://senko-info.ga/api/roflan/haudi').then((res) =>
         res.json());
