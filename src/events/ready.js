@@ -36,7 +36,7 @@ module.exports = {
         .then((data) => {
           const url = data.url;
 
-        bot.channels.cache.get('791338847900401674').send(url);
+        bot.channels.cache.get('791345287586119701').send(url);
       });
     }, 900000);
   },
