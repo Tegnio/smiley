@@ -12,12 +12,15 @@ const Logger = require("../modules/Logger");
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    Logger.log("database", "Connected to mongoDB!");
+    Logger.log("db", "Connected to mongoDB!");
   } catch (e) {
-    Logger.error("database", e);
+    Logger.error("db", e);
   }
 
   connection.on("disconnected", () => {
-    Logger.log("database", "Disconnected from mongoDB!");
+    Logger.log("db", "Disconnected from mongoDB!");
+  });
+  connection.on("reconnected", () => {
+    Logger.log("db", "Reconnected to mongoDB!");
   });
 })();

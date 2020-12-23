@@ -2,7 +2,6 @@ require("./utils/database");
 const { Collection, Client } = require("discord.js");
 const { token } = require("../config.json");
 const { GiveawaysManager } = require("discord-giveaways");
-const { NekoBot } = require("nekobot-api");
 const { findMember, getGuildLang, sendErrorLog } = require("./utils/functions");
 
 const bot = new Client({
@@ -18,7 +17,6 @@ bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.cooldowns = new Collection();
 bot.findMember = findMember;
-bot.nba = new NekoBot;
 
 require("moment-duration-format");
 require("./modules/command")(bot);
