@@ -27,8 +27,5 @@ module.exports = {
     sendMessage.react("👎");
     sendMessage.react("🤷");
 
-    if(message.guild.me.hasPermission("MANAGE_MESSAGES") {
-      message.delete();
-    };
   },
 };
