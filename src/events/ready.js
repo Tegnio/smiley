@@ -23,7 +23,7 @@ module.exports = {
         .then((data) => {
           const text = data.text;
 
-          bot.channels.cache.get('791338847900401674').send(text);
+          bot.channels.cache.get('791338847900401674').startTyping().send(text).stopTyping();
         });
     }, 15000);
   },
