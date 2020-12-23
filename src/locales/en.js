@@ -87,6 +87,7 @@ module.exports = {
     GH_BIO: "Bio",
     URL: "URL",
     CMD_DISABLED: "This command was disabled on this server.",
+    IQ: "Your IQ is {iq}",
     CALC: "Calculator",
   },
 };
