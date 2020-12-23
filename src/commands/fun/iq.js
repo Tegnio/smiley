@@ -7,8 +7,7 @@ module.exports = {
   cooldown: 2,
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
-
-    const iq = Math.floor(Math.random() * 208) + 1;
+    const iq = Math.floor(Math.random() * 160) + 1;
 
     const embed = BaseEmbed(message)
       .setTitle(lang.OTHER.IQ.replace("{iq}", iq));
