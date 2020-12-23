@@ -17,7 +17,7 @@ module.exports = {
     }
 
     const data = await fetch(
-      `https://nekobot.xyz/api/imagegen?type=clyde&text=${text}`
+      `https://nekobot.xyz/api/imagegen?type=clyde&text=${encodeURIComponent(text)}`
     ).then((res) => res.json());
 
     const embed = BaseEmbed(message)
