@@ -22,7 +22,9 @@ module.exports = {
     .setTitle(question);
 
     const sendMessage = await message.channel.send(embed);
-    message.delete();
+    if(message.guild.me.hasPermission("MANAGE_MESSAGES") {
+      message.delete();
+    }
 
     sendMessage.react("👍");
     sendMessage.react("👎");
