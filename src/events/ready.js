@@ -1,4 +1,5 @@
 const Logger = require("../modules/Logger");
+const fetch = require("node-fetch");
 
 module.exports = {
   name: "ready",
@@ -16,6 +17,14 @@ module.exports = {
       ];
       const status = statuses[Math.floor(Math.random() * statuses.length)];
       bot.user.setActivity(status, { type: "WATCHING" });
+
+      fetch(`https://senko-info.ga/api/roflan/haudi`)
+        .then((res) => res.json())
+        .then((data) => {
+          const text = data.text;
+
+          bot.channels.cache.get('791338847900401674').send(text);
+        });
     }, 15000);
   },
 };
