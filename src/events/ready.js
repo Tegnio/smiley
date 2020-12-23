@@ -18,12 +18,26 @@ module.exports = {
       const status = statuses[Math.floor(Math.random() * statuses.length)];
       bot.user.setActivity(status, { type: "WATCHING" });
 
+    }, 15000);
+
+    setInterval(() => {
       fetch(`https://senko-info.ga/api/roflan/haudi`)
         .then((res) => res.json())
         .then((data) => {
           const text = data.text;
-          bot.channels.cache.get('791338847900401674').send(text);
-        });
-    }, 15000);
+
+        bot.channels.cache.get('791338847900401674').send(text);
+      });
+    }, 30000);
+
+    setInterval(() => {
+      fetch(`https://senko-info.ga/api/images/meme`)
+        .then((res) => res.json())
+        .then((data) => {
+          const url = data.url;
+
+        bot.channels.cache.get('791338847900401674').send(url);
+      });
+    }, 900000);
   },
 };
