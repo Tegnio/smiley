@@ -10,10 +10,10 @@ module.exports = {
     const lang = await bot.getGuildLang(message.guild.id);
     const text = args.join(" ");
     if(!text) return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
-    if(text.length > 80) {
+    if(text.length > 64) {
       return message.channel.send(lang.GLOBAL.LONG_ARGS
       .replace("{length}", text.length)
-      .replace("{limit}", "80"));
+      .replace("{limit}", "64"));
     }
 
     const data = await fetch(
