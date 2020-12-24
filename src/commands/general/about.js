@@ -47,9 +47,9 @@ module.exports = {
       `, true)
       .addField(lang.BOT.SPECIAL_THANKS,
       `\`\`\`rb
-Xaliks#5991 (448799481777881089)
-[ElectroPlayer ✔]#0256 (283666032823107585)
-CasperTheGhost#4546 (406323530301571072)\`\`\`
+Xaliks#5991 [ID: 448799481777881089]
+[ElectroPlayer ✔]#0256 [ID: 283666032823107585]
+CasperTheGhost#4546 [ID: 406323530301571072]\`\`\`
       `);
 
     message.channel.send(embed);
