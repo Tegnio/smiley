@@ -14,7 +14,7 @@ module.exports = {
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const intensity = Math.floor(Math.random() * 9 + 1)
     const data = await fetch(`https://nekobot.xyz/api/imagegen?type=magik&image=${image}&intensity=${intensity}`)
-      .then((res) => res.json);
+      .then((res) => res.json());
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
