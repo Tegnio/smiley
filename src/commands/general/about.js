@@ -20,7 +20,7 @@ module.exports = {
         `
         [Tegnio#6882](https://tegnio.carrd.co/)
         `, true)
-      .addField(lang.BOT.UPTIME, lang.GLOBAL.NOT_AVAILABLE, true)
+      .addField(lang.BOT.PLATFORM, `${process.platform} / ${process.arch}`, true)
       .addField(lang.BOT.LATENCY, `${Math.round(bot.ws.ping / 2).toFixed(1)} ${lang.TIME.MILLISECONDS}`, true)
       .addField(lang.BOT.SERVERS, bot.guilds.cache.size, true)
       .addField(lang.BOT.USERS, bot.users.cache.size, true)

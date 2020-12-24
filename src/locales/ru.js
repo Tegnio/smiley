@@ -12,7 +12,7 @@ module.exports = {
   BOT: {
     ABOUT: "О smiley",
     DEVELOPER: "Разработчик",
-    UPTIME: "Время работы",
+    PLATFORM: "Платформа",
     SERVERS: "Серверов",
     USERS: "Пользователей",
     COMMANDS: "Команд",
