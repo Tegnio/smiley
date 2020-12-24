@@ -7,8 +7,7 @@ module.exports = {
   ownerOnly: true,
   async execute(bot, message, args) => {
     Logger.log("bot", "Restarting...")
-    process.exit(1).then(() => {
-      process.execSync(`pwd`).toString('utf8');
-    });
+    process.execSync(`pwd`).toString('utf8');
+    process.exit(1);
   },
 };
