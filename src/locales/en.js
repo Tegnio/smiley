@@ -22,6 +22,7 @@ module.exports = {
     ADD: "Click here to add me",
     USED_APIS: "Used APIs",
     VOTE: "Vote for me!",
+    SPECIAL_THANKS: "Special thanks to:",
     NO_PERMS: "It seems to me that I don't have some permissions in order to work properly.\nPlease kick & re-invite me using this link:\n{link}",
   },
   MEMBER: {
