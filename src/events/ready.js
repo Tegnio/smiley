@@ -26,18 +26,8 @@ module.exports = {
         .then((data) => {
           const text = data.text;
 
-        bot.channels.cache.get('791338847900401674').send(text);
+        bot.channels.cache.get('721803638510583839').send(text);
       });
-    }, 30000);
-
-    setInterval(() => {
-      fetch(`https://senko-info.ga/api/images/meme`)
-        .then((res) => res.json())
-        .then((data) => {
-          const url = data.url;
-
-        bot.channels.cache.get('791345287586119701').send(url);
-      });
-    }, 900000);
+    }, 3600000);
   },
 };
