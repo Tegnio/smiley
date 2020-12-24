@@ -4,6 +4,7 @@ module.exports = {
   name: "google",
   description: "",
   category: "useful",
+  aliases: ["lmgtfy"],
   cooldown: 5,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);

@@ -5,6 +5,7 @@ module.exports = {
   name: "feedback",
   description: "",
   category: "general",
+  aliases: ["bug", "bugreport", "suggest"],
   cooldown: 20,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);

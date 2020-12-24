@@ -4,6 +4,7 @@ module.exports = {
   name: "avatar",
   description: "",
   category: "useful",
+  aliases: ["ava", "av"],
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
