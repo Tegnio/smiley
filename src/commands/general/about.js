@@ -46,11 +46,11 @@ module.exports = {
       [⌛ Top.gg](https://top.gg/bot/781179810700984330)
       `, true)
       .addField(lang.BOT.SPECIAL_THANKS,
-      `
+      `\`\`\`rb
       Xaliks#5991 (448799481777881089)
       [ElectroPlayer ✔]#0256 (283666032823107585)
       CasperTheGhost#4546 (406323530301571072)
-      `);
+      \`\`\``);
 
     message.channel.send(embed);
   },
