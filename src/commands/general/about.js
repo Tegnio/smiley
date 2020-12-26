@@ -43,7 +43,7 @@ module.exports = {
       [Top Bots List](https://top-bots.xyz/bot/781179810700984330)
       [TopCord](https://bots.topcord.ru/bots/781179810700984330)
       [BotiCord](https://boticord.top/bot/781179810700984330)
-      [⌛ Top.gg](https://top.gg/bot/781179810700984330)
+      [Top.gg](https://top.gg/bot/781179810700984330)
       `, true)
       .addField(lang.BOT.SPECIAL_THANKS,
       `\`\`\`rb
