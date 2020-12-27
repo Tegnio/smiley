@@ -15,7 +15,7 @@
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
     "chalk": "^4.1.0",
-    "discord-giveaways": "^4.2.1",
+    "discord-giveaways": "^4.4.1",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "erlpack": "github:discord/erlpack",

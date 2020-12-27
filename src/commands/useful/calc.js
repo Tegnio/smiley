@@ -4,7 +4,7 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 module.exports = {
   name: "calc",
   description: "",
-  category: "games",
+  category: "useful",
   aliases: ["math"],
   cooldown: 2,
   async execute(bot, message, args) {
