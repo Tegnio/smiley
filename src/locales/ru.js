@@ -44,10 +44,10 @@ module.exports = {
     UPDATED: "Язык успешно обновлен на **{language}**!"
   },
   TIME: {
-    DAYS: "дней",
-    HOURS: "часов",
-    MINUTES: "минут",
-    SECONDS: "секунд",
+    DAYS: "дн.",
+    HOURS: "ч.",
+    MINUTES: "мин.",
+    SECONDS: "сек.",
     MILLISECONDS: "мс"
   },
   HELP: {
@@ -90,5 +90,6 @@ module.exports = {
     CMD_DISABLED: "Эта команда была выключена на данном сервере.",
     IQ: "Ваш IQ: {iq}",
     CALC: "Калькулятор",
+    CALC_ERR: "При выполнении вычислений произошла ошибка.",
   },
 };

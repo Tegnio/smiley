@@ -31,7 +31,7 @@ module.exports = {
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
   },
   GUILD: {
-    NOT_FOUND: "Server not found.",
+    NOT_FOUND: "Guild not found.",
     LEFT: "I've successfully left the **{guild}** guild.",
   },
   IMAGE: {
@@ -45,9 +45,9 @@ module.exports = {
   },
   TIME: {
     DAYS: "days",
-    HOURS: "hours",
-    MINUTES: "minutes",
-    SECONDS: "seconds",
+    HOURS: "hrs",
+    MINUTES: "mins",
+    SECONDS: "secs",
     MILLISECONDS: "ms",
   },
   HELP: {
@@ -90,5 +90,6 @@ module.exports = {
     CMD_DISABLED: "This command was disabled on this server.",
     IQ: "Your IQ is {iq}",
     CALC: "Calculator",
+    CALC_ERR: "An error has occurred while performing the calculations.",
   },
 };
