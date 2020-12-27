@@ -48,12 +48,12 @@ module.exports = {
       const embed = BaseEmbed(message)
         .setTitle(`\`${cmd.name}\``)
         .setDescription(lang.HELP.DESCRIPTION, `🛠️`)
-        .addField(lang.HELP.CATEGORY, `🛠️`, true)
+        .addField(lang.HELP.CATEGORY, cmd.category, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
-        .addField(lang.HELP.USAGE, `🛠️`)
-        .addField(`🛠️`, `🛠️`, true)
-        .addField(`🛠️`, `🛠️`, true);
+        .addField(lang.HELP.USAGE, lang.GLOBAL.NOT_AVAILABLE)
+        .addField(lang.HELP.BOT_PERMS, lang.GLOBAL.NOT_AVAILABLE, true)
+        .addField(lang.HELP.MEMBER_PERMS, lang.GLOBAL.NOT_AVAILABLE, true);
 
       return message.channel.send(embed);
     }
