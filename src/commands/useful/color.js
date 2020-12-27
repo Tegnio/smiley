@@ -10,7 +10,7 @@ module.exports = {
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const rcolor = Math.floor(Math.random()*16777215).toString(16);
-    const url = `https://api.no-api-key.com/api/v2/color?hex=`;
+    const url = `https://some-random-api.ml/canvas/colorviewer?hex=`;
     const color = args[0];
 
     if(!color) {
