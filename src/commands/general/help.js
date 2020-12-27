@@ -15,6 +15,7 @@ module.exports = {
     const cmdArgs = args[0];
     const nsfw = message.channel.nsfw;
 
+    if (categories.includes(cmdArgs)) {
       const cmds = bot.commands
         .filter((com) => com.category === cmdArgs)
         .map((cmd) => `\`${cmd.name}\``)
@@ -28,9 +29,10 @@ module.exports = {
         }
       }
       return message.channel.send({ embed });
-
+    } else if (cmdArgs) {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
+      if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
 
       const aliases = cmd.aliases
         ? cmd.aliases.map((alias) => alias)
@@ -45,13 +47,13 @@ module.exports = {
 
       const embed = BaseEmbed(message)
         .setTitle(`\`${cmd.name}\``)
-        .setDescription(lang.HELP.DESCRIPTION, `soon:tm:`)
-        .addField(lang.HELP.CATEGORY, `soon:tm:`, true)
+        .setDescription(lang.HELP.DESCRIPTION, `🛠️`)
+        .addField(lang.HELP.CATEGORY, `🛠️`, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
-        .addField(lang.HELP.USAGE, `soon:tm:`)
-        .addField(`soon:tm:`, `soon:tm:`, true)
-        .addField(`soon:tm:`, `soon:tm:`, true);
+        .addField(lang.HELP.USAGE, `🛠️`)
+        .addField(`🛠️`, `🛠️`, true)
+        .addField(`🛠️`, `🛠️`, true);
 
       return message.channel.send(embed);
     }
