@@ -15,23 +15,10 @@ module.exports = {
     const cmdArgs = args[0];
     const nsfw = message.channel.nsfw;
 
-    if (categories.includes(cmdArgs)) {
       const cmds = bot.commands
         .filter((com) => com.category === cmdArgs)
         .map((cmd) => `\`${cmd.name}\``)
         .join(", ");
-
-      const embed = BaseEmbed(message).setTitle(
-        `${lang.HELP.COMMANDS}: ${cmdArgs}`
-      );
-
-      if (cmdArgs === "botowner") {
-        if (owners.includes(message.author.id)) {
-          embed.setDescription(cmds);
-        } else {
-          embed.setDescription(lang.HELP.OWNER_ONLY);
-        }
-      }
 
       if (["nsfw"].includes(cmdArgs.toLowerCase())) {
         if (nsfw) {
@@ -59,13 +46,13 @@ module.exports = {
 
       const embed = BaseEmbed(message)
         .setTitle(`\`${cmd.name}\``)
-        .setDescription(lang.HELP.DESCRIPTION, `${lang.DESCRIPTION.toCapitalize(cmd.name)} || ${lang.GLOBAL.NOT_SPECIFIED}`)
-        .addField(lang.HELP.CATEGORY, lang.HELP.toCapitalize(cmd.category), true)
+        .setDescription(lang.HELP.DESCRIPTION, `soon:tm:`)
+        .addField(lang.HELP.CATEGORY, `soon:tm:`, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
-        .addField(lang.HELP.USAGE, `${prefix}${lang.USAGE.toCapitalize(cmd.name)} || ${lang.GLOBAL.NOT_SPECIFIED}`)
-        .addField(lang.HELP.BOT_PERMS, botPerms, true)
-        .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
+        .addField(lang.HELP.USAGE, `soon:tm:`)
+        .addField(`soon:tm:`, `soon:tm:`, true)
+        .addField(`soon:tm:`, `soon:tm:`, true);
 
       return message.channel.send(embed);
     }
