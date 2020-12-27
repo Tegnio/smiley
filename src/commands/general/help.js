@@ -28,10 +28,9 @@ module.exports = {
         }
       }
       return message.channel.send({ embed });
-    } else if (cmdArgs) {
+
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
-      if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
 
       const aliases = cmd.aliases
         ? cmd.aliases.map((alias) => alias)
