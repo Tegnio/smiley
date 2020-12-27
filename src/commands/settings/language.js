@@ -10,7 +10,7 @@ module.exports = {
   name: "language",
   description: "",
   category: "settings",
-  cooldown: 10,
+  cooldown: 5,
   aliases: ["lang"],
   memberPermissions: ["MANAGE_GUILD"],
   async execute(bot, message, args) {

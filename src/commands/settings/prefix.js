@@ -6,7 +6,7 @@ module.exports = {
   name: "prefix",
   description: "",
   category: "settings",
-  cooldown: 10,
+  cooldown: 5,
   memberPermissions: ["MANAGE_GUILD"],
   async execute(bot, message, args) {
     const prefix = args[0];
