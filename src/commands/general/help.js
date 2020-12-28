@@ -34,6 +34,7 @@ module.exports = {
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
 
+      const description = cmd.description ? cmd.description : lang.GLOBAL.NONE;
       const aliases = cmd.aliases
         ? cmd.aliases.map((alias) => alias)
         : lang.GLOBAL.NONE;
@@ -47,7 +48,7 @@ module.exports = {
 
       const embed = BaseEmbed(message)
         .setTitle(`\`${cmd.name}\``)
-        .setDescription(lang.HELP.DESCRIPTION, `🛠️`)
+        .setDescription(`${lang.HELP.DESCRIPTION}: ${description}`)
         .addField(lang.HELP.CATEGORY, cmd.category, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
