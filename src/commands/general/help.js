@@ -39,6 +39,7 @@ module.exports = {
         ? cmd.aliases.map((alias) => alias)
         : lang.GLOBAL.NONE;
       const cooldown = cmd.cooldown ? `${cmd.cooldown} ${lang.TIME.SECONDS}` : lang.GLOBAL.NONE;
+      const usage = cmd.usage ? cmd.usage : lang.GLOBAL.NOT_SPECIFIED;
       const memberPerms = !cmd.memberPermissions
         ? lang.GLOBAL.NONE
         : [...cmd.memberPermissions].map((p) => p);
@@ -52,7 +53,7 @@ module.exports = {
         .addField(lang.HELP.CATEGORY, cmd.category, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
-        .addField(lang.HELP.USAGE, cmd.usage)
+        .addField(lang.HELP.USAGE, usage)
         .addField(lang.HELP.BOT_PERMS, botPerms, true)
         .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
 
