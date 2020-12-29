@@ -25,6 +25,8 @@ module.exports = {
       .setURL(data.message)
       .setImage(data.message);
 
-    message.channel.send(embed);
+    message.channel.startTyping()
+    .then(() => message.channel.send(embed))
+    .then(() => message.channel.stopTyping(true));
   },
 };

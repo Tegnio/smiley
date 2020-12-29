@@ -9,7 +9,6 @@ module.exports = {
     const lang = await bot.getGuildLang(message.guild.id);
     const member = bot.findMember(message, args, true);
     const image = member.user.displayAvatarURL({ size: 512, format: "png", dynamic: true });
-    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const data = `https://api.no-api-key.com/api/v2/invert?image=${image}`;
 
     const embed = BaseEmbed(message)
@@ -17,9 +16,8 @@ module.exports = {
     .setURL(data)
     .setImage(data);
 
-    setTimeout(() => {
-      message.channel.send(embed);
-      wait_msg.delete();
-    }, 100);
+    message.channel.startTyping()
+    .then(() => message.channel.send(embed))
+    .then(() => message.channel.stopTyping(true));
   },
 };

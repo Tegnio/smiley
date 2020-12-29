@@ -26,9 +26,8 @@ module.exports = {
     .setTitle(decodeURIComponent(query))
     .setURL(url);
 
-    setTimeout(() => {
-      message.channel.send(embed);
-      wait_msg.delete();
-    }, 100);
+    message.channel.startTyping()
+    .then(() => message.channel.send(embed))
+    .then(() => message.channel.stopTyping(true));
   },
 };
