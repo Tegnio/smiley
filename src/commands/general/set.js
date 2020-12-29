@@ -4,6 +4,7 @@ module.exports = {
   name: "set",
   description: "",
   category: "general",
+  cooldown: 2,
   memberPermissions: ["ADMINISTRATOR"],
   async execute(bot, message, args) {
     const languages = bot.getLanguages();
