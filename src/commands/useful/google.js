@@ -19,7 +19,7 @@ module.exports = {
       return message.channel.stopTyping(true)
           .then(() => message.channel.send(lang.GLOBAL.LONG_ARGS
         .replace("{length}", query.length)
-        .replace("{limit}", "256")));
+        .replace("{limit}", "256"));
     }
 
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);

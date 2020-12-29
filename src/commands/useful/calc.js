@@ -29,7 +29,7 @@ module.exports = {
       .then(() => message.channel.send(embed));
     } catch (e) {
       return message.channel.stopTyping(true)
-      .then(() => message.channel.send(lang.OTHER.CALC_ERR));
+      .then(() => message.channel.send(lang.OTHER.CALC_ERR);
     }
   },
 };

@@ -26,7 +26,7 @@ module.exports = {
         return message.channel.stopTyping(true)
           .then(() => message.channel.send(lang.GLOBAL.LONG_ARGS
           .replace("{length}", color.length)
-          .replace("{limit}", "6")));
+          .replace("{limit}", "6"));
     } else {
         const embed = BaseEmbed(message)
         .setColor(color)
