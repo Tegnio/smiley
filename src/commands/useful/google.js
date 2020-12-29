@@ -8,7 +8,6 @@ module.exports = {
   cooldown: 5,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    message.channel.startTyping();
     const query = encodeURIComponent(args.join(" "));
     const url = `https://lmgtfy.app/?q=${query}`;
 
@@ -16,8 +15,7 @@ module.exports = {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
     if(query.length > 256) {
-      return message.channel.stopTyping(true)
-          .then(() => message.channel.send(lang.GLOBAL.LONG_ARGS
+      return message.channel.send(lang.GLOBAL.LONG_ARGS
         .replace("{length}", query.length)
         .replace("{limit}", "256"));
     }
@@ -28,7 +26,8 @@ module.exports = {
     .setTitle(decodeURIComponent(query))
     .setURL(url);
 
-    message.channel.stopTyping(true)
-    .then(() => message.channel.send(embed));
+    message.channel.startTyping()
+    .then(() => message.channel.send(embed))
+    .then(() => message.channel.stopTyping(true));
   },
 };

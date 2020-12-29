@@ -9,7 +9,6 @@ module.exports = {
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    message.channel.startTyping();
     const sum = args[0];
     try {
       const calculation = math.eval(sum);
@@ -25,11 +24,9 @@ module.exports = {
           `\`\`\`js\n${calculation}\`\`\``
         );
 
-      message.channel.stopTyping(true)
-      .then(() => message.channel.send(embed));
+      message.channel.send(embed);
     } catch (e) {
-      return message.channel.stopTyping(true)
-      .then(() => message.channel.send(lang.OTHER.CALC_ERR);
+      return message.channel.send(lang.OTHER.CALC_ERR);
     }
   },
 };
