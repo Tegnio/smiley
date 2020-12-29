@@ -15,13 +15,17 @@ module.exports = {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
 
+    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const url = `https://api.github.com/users/${encodeURIComponent(username)}`;
     const result = await fetch(url).then((res) => res.json());
     const user = result;
 
     if (user?.message === "Not Found") {
       return message.channel.send(lang.OTHER.GH_NOT_FOUND)
+        .then(() => wait_msg.delete());
     }
+
+    wait_msg.delete();
 
     const twitter = user.twitter_username
       ? `[@${user.twitter_username}](https://twitter.com/${user.twitter_username})`
@@ -44,8 +48,6 @@ module.exports = {
       .addField(lang.OTHER.GH_BIO, bio)
       .setThumbnail(user.avatar_url);
 
-      message.channel.startTyping()
-      .then(() => message.channel.send(embed))
-      .then(() => message.channel.stopTyping(true));
+    message.channel.send(embed);
   },
 };

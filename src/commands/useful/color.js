@@ -19,9 +19,7 @@ module.exports = {
       .setThumbnail(url + rcolor)
       .setTitle(`#${rcolor}`);
 
-      message.channel.startTyping()
-      .then(() => message.channel.send(embed))
-      .then(() => message.channel.stopTyping(true));
+      message.channel.send(embed);
     } else if(color.length > 6) {
         return message.channel.send(lang.GLOBAL.LONG_ARGS
           .replace("{length}", color.length)
@@ -32,9 +30,7 @@ module.exports = {
         .setThumbnail(url + color)
         .setTitle(`#${color}`);
 
-    message.channel.startTyping()
-    .then(() => message.channel.send(embed))
-    .then(() => message.channel.stopTyping(true));
+      message.channel.send(embed);
     };
   },
 };

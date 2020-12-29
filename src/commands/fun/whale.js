@@ -18,8 +18,9 @@ module.exports = {
       .setURL(data.link)
       .setImage(data.link);
 
-    message.channel.startTyping()
-    .then(() => message.channel.send(embed))
-    .then(() => message.channel.stopTyping(true));
+    setTimeout(() => {
+      message.channel.send(embed);
+      wait_msg.delete();
+    }, 100);
   },
 };

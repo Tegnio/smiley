@@ -12,8 +12,6 @@ module.exports = {
     const embed = BaseEmbed(message)
       .setTitle(lang.OTHER.IQ.replace("{iq}", iq));
 
-    message.channel.startTyping()
-    .then(() => message.channel.send(embed))
-    .then(() => message.channel.stopTyping(true));
+    message.channel.send(embed);
   },
 };
