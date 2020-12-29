@@ -53,6 +53,7 @@ module.exports = {
   HELP: {
     HELP: "Список команд",
     HELP_DESC: "Используйте `{prefix}` в качестве префикса для команд.",
+    DESCRIPTION: "Описание",
     GENERAL: "Основное",
     FUN: "Весёлости",
     NSFW: "NSFW",

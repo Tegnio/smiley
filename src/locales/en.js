@@ -53,6 +53,7 @@ module.exports = {
   HELP: {
     HELP: "List of commands",
     HELP_DESC: "Use `{prefix}` as a server prefix.",
+    DESCRIPTION: "Description",
     GENERAL: "General",
     FUN: "Fun",
     NSFW: "NSFW",

@@ -52,9 +52,9 @@ module.exports = {
         .addField(lang.HELP.CATEGORY, cmd.category, true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
-        .addField(lang.HELP.USAGE, lang.GLOBAL.NOT_AVAILABLE)
-        .addField(lang.HELP.BOT_PERMS, lang.GLOBAL.NOT_AVAILABLE, true)
-        .addField(lang.HELP.MEMBER_PERMS, lang.GLOBAL.NOT_AVAILABLE, true);
+        .addField(lang.HELP.USAGE, cmd.usage)
+        .addField(lang.HELP.BOT_PERMS, botPerms, true)
+        .addField(lang.HELP.MEMBER_PERMS, memberPerms, true);
 
       return message.channel.send(embed);
     }

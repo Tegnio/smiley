@@ -3,8 +3,9 @@ const { updateGuildById, getGuildById } = require("../../utils/functions");
 module.exports = {
   name: "set",
   description: "",
-  category: "general",
+  category: "botowner",
   memberPermissions: ["ADMINISTRATOR"],
+  ownerOnly: true,
   async execute(bot, message, args) {
     const languages = bot.getLanguages();
     const guildId = message.guild.id;
