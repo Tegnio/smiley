@@ -9,7 +9,7 @@ module.exports = {
   nsfwOnly: true,
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
-    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
+    message.channel.startTyping();
     const data = await fetch(
       "https://nekobot.xyz/api/image?type=hthigh"
     ).then((res) => res.json());
@@ -19,8 +19,7 @@ module.exports = {
     .setURL(data.message)
     .setImage(data.message);
 
-    message.channel.startTyping()
-    .then(() => message.channel.send(embed))
-    .then(() => message.channel.stopTyping(true));
+    message.channel.stopTyping(true)
+    .then(() => message.channel.send(embed));
   },
 };

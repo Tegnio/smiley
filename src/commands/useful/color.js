@@ -9,6 +9,7 @@ module.exports = {
   aliases: ["clr"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
+    message.channel.startTyping();
     const rcolor = Math.floor(Math.random()*16777215).toString(16);
     const url = `https://some-random-api.ml/canvas/colorviewer?hex=`;
     const color = args[0];
@@ -19,11 +20,11 @@ module.exports = {
       .setThumbnail(url + rcolor)
       .setTitle(`#${rcolor}`);
 
-      message.channel.startTyping()
-      .then(() => message.channel.send(embed))
-      .then(() => message.channel.stopTyping(true));
+      message.channel.stopTyping(true)
+      .then(() => message.channel.send(embed));
     } else if(color.length > 6) {
-        return message.channel.send(lang.GLOBAL.LONG_ARGS
+        return message.channel.stopTyping(true)
+          .then(() => message.channel.send(lang.GLOBAL.LONG_ARGS
           .replace("{length}", color.length)
           .replace("{limit}", "6"));
     } else {
@@ -32,9 +33,8 @@ module.exports = {
         .setThumbnail(url + color)
         .setTitle(`#${color}`);
 
-    message.channel.startTyping()
-    .then(() => message.channel.send(embed))
-    .then(() => message.channel.stopTyping(true));
+      message.channel.stopTyping(true)
+      .then(() => message.channel.send(embed));
     };
   },
 };

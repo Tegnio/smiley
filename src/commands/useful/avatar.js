@@ -8,6 +8,7 @@ module.exports = {
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
+    message.channel.startTyping();
     const member = bot.findMember(message, args, true);
 
     const avatar = member.user.displayAvatarURL({ format: "png", size: 2048, dynamic: true });
@@ -17,6 +18,7 @@ module.exports = {
       .setURL(avatar)
       .setImage(avatar);
 
-    message.channel.send(embed);
+    message.channel.stopTyping(true)
+    .then(() => message.channel.send(embed));
   },
 };

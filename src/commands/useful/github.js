@@ -9,10 +9,12 @@ module.exports = {
   aliases: ["gh"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
+    message.channel.startTyping();
     const username = args[0];
 
     if (!username) {
-      return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
+      return message.channel.stopTyping(true)
+        .then(() => message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
 
     const url = `https://api.github.com/users/${encodeURIComponent(username)}`;
@@ -44,8 +46,7 @@ module.exports = {
       .addField(lang.OTHER.GH_BIO, bio)
       .setThumbnail(user.avatar_url);
 
-      message.channel.startTyping()
-      .then(() => message.channel.send(embed))
-      .then(() => message.channel.stopTyping(true));
+      message.channel.stopTyping(true)
+      .then(() => message.channel.send(embed));
   },
 };
