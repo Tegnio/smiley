@@ -9,7 +9,7 @@ module.exports = {
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    const sum = args[];
+    const sum = args.join(" ");
     try {
       if (!sum) {
         return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
