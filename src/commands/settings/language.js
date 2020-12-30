@@ -19,25 +19,21 @@ module.exports = {
     const guildId = message.guild.id;
     const language = args[0];
 
-if (!language) {
-  return message.channel.send(lang.LANG.PROVIDE_LANG);
-}
-if(language === 'list') {
-  return message.channel.send(
-    `${lang.LANG.LIST} ${languages
-      .map((l) => `\`${l}\``)
-      .join(", ")}`
-  );
-}
-if(!languages.includes(language)) {
-  return message.channel.send(
-    `${lang.LANG.NOT_AVAILABLE} ${languages
-      .map((l) => `\`${l}\``)
-      .join(", ")}`
-  );
-}
-  updateItem("locale", language, guildId);
-  message.react("✅")
+    if (!language) {
+      return message.channel.send(
+        `${lang.LANG.LIST} ${languages
+        .map((l) => `\`${l}\``)
+        .join(", ")}`);
+    }
+    if(!languages.includes(language)) {
+      return message.channel.send(
+        `${lang.LANG.NOT_AVAILABLE} ${languages
+        .map((l) => `\`${l}\``)
+        .join(", ")}`);
+    }
+    
+  updateItem("locale", language, guildId)
+  .then(() => message.react("✅"));
 
 async function updateItem(type, item, guildId) {
   await updateGuildById(guildId, {
