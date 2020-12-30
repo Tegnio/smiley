@@ -24,13 +24,13 @@ module.exports = {
     VOTE: "Vote for me!",
     SPECIAL_THANKS: "Special thanks to:",
     NO_PERMS: "It seems to me that I don't have some permissions in order to work properly.\nPlease kick & re-invite me using this link:\n{link}",
-    NEED_PERMS: "I need more permissions: {neededPermissions}",
+    NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
   },
   MEMBER: {
     COOLDOWN: "Please wait **{cooldown}** more seconds before using the `{cmd}` command again.",
     BLACKLISTED: "You've been blacklisted from using this bot.",
     NO_PERMS: "Sorry, you don't have the correct permissions for this command.",
-    NEED_PERMS: "You need more permissions: {neededPermissions}",
+    NEED_PERMS: "You need more permissions to execute this command: {neededPermissions}",
   },
   GUILD: {
     NOT_FOUND: "Guild not found.",
@@ -69,6 +69,7 @@ module.exports = {
     USAGE: "Usage",
     BOT_PERMS: "Bot Permissions",
     MEMBER_PERMS: "Member Permissions",
+    CMD_NOT_FOUND: "This command does not exist. Probs you've made a typo.",
   },
   OTHER: {
     GOOGLE_SEARCH: "Google Search",
