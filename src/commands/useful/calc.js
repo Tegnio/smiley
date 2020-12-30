@@ -17,8 +17,10 @@ module.exports = {
 
       const calculation = math.evaluate(sum
           .replace(/[x]/gi, "*")
+          .replace(/[×]/gi, "*")
           .replace(/[,]/g, ".")
           .replace(/[÷]/gi, "/")
+          .replace(/[:]/gi, "/")
       );
 
       const embed = BaseEmbed(message)
