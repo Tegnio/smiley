@@ -91,7 +91,10 @@ module.exports = {
           });
 
           if (neededPermissions[0]) {
-            return message.channel.send(errorEmbed(neededPermissions, message));
+            return message.channel.send(lang.BOT.NEED_PERMS
+              .replace("{neededPermissions}", neededPermissions
+                .map((p) => `\`${p.toUpperCase()}\``)
+                .join(", ")));
           }
         }
 
@@ -105,10 +108,10 @@ module.exports = {
           });
 
           if (neededPermissions.length > 0) {
-            return message.channel.send(
-              `You need: ${neededPermissions
+            return message.channel.send(lang.MEMBER.NEED_PERMS
+              .replace("{neededPermissions}", neededPermissions
                 .map((p) => `\`${p.toUpperCase()}\``)
-                .join(", ")} permissions`
+                .join(", "))
             );
           }
         }

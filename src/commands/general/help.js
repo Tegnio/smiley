@@ -7,6 +7,7 @@ module.exports = {
   name: "help",
   description: "",
   category: "general",
+  aliases: ["cmds", "h"],
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);

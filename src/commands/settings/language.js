@@ -13,6 +13,7 @@ module.exports = {
   cooldown: 5,
   aliases: ["lang"],
   memberPermissions: ["MANAGE_GUILD"],
+  botPermissions: ["ADD_REACTIONS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const guildId = message.guild.id;

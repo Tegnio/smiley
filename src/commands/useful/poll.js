@@ -5,6 +5,7 @@ module.exports = {
   description: "",
   category: "useful",
   cooldown: 5,
+  botPermissions: ["ADD_REACTIONS", "MANAGE_MESSAGES"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const question = args.join(" ");
@@ -23,6 +24,7 @@ module.exports = {
 
     const sendMessage = await message.channel.send(embed);
 
+    message.delete();
     sendMessage.react("👍");
     sendMessage.react("👎");
     sendMessage.react("🤷");
