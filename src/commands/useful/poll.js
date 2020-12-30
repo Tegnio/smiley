@@ -5,7 +5,7 @@ module.exports = {
   description: "",
   category: "useful",
   cooldown: 5,
-  botPermissions: ["ADD_REACTIONS", "EMBED_LINKS" "MANAGE_MESSAGES"],
+  botPermissions: ["ADD_REACTIONS", "EMBED_LINKS", "MANAGE_MESSAGES"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const question = args.join(" ");
