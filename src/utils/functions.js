@@ -154,19 +154,6 @@ async function removeGuild(guildId) {
 }
 
 /**
- * @param {Array} permissions
- * @param {Object} message
- */
-const errorEmbed = (permissions, message) => {
-  return BaseEmbed(message)
-    .setTitle("Woah!")
-    .setDescription(
-      `❌ I need ${permissions.map((p) => `\`${p}\``).join(", ")} permissions!`
-    )
-    .setColor("ORANGE");
-};
-
-/**
  * @param {Message} message
  * @param {string[]} args
  * @param {Boolean} allowAuthor
@@ -244,7 +231,6 @@ const formatDate = (date) => moment(date).format("DD.MM.YYYY, HH:mm:ss");
 const toCapitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
 module.exports = {
-  errorEmbed,
   sendErrorLog,
   formatDate,
   toCapitalize,
