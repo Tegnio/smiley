@@ -7,6 +7,7 @@ module.exports = {
   category: "useful",
   aliases: ["math"],
   cooldown: 2,
+  botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const sum = args.join(" ");

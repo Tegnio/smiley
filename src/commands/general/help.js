@@ -9,6 +9,7 @@ module.exports = {
   category: "general",
   aliases: ["cmds", "h"],
   cooldown: 2,
+  botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const guild = await getGuildById(message.guild.id);
@@ -16,21 +17,7 @@ module.exports = {
     const cmdArgs = args[0];
     const nsfw = message.channel.nsfw;
 
-    if (categories.includes(cmdArgs)) {
-      const cmds = bot.commands
-        .filter((com) => com.category === cmdArgs)
-        .map((cmd) => `\`${cmd.name}\``)
-        .join(", ");
-
-      if (["nsfw"].includes(cmdArgs.toLowerCase())) {
-        if (nsfw) {
-          embed.setDescription(cmds);
-        } else {
-          embed.setDescription(lang.HELP.NSFW_ONLY);
-        }
-      }
-      return message.channel.send({ embed });
-    } else if (cmdArgs) {
+    if (cmdArgs) {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
@@ -86,14 +73,14 @@ module.exports = {
 
     const embed = BaseEmbed(message)
       .addField(lang.HELP.GENERAL, generalCmds)
-      .addField(lang.HELP.FUN, funCmds);
+      .addField(lang.HELP.FUN, funCmds)
+      .addField(lang.HELP.USEFUL, usefulCmds);
     if (nsfw) {
       embed.addField(lang.HELP.NSFW, nsfwCmds);
     } else {
       embed.addField(lang.HELP.NSFW, lang.HELP.NSFW_ONLY);
     }
     embed
-      .addField(lang.HELP.USEFUL, usefulCmds)
       .addField(lang.HELP.SETTINGS, settingsCmds)
       .setDescription(lang.HELP.HELP_DESC.replace("{prefix}", prefix))
       .setTitle(lang.HELP.HELP);

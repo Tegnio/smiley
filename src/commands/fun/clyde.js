@@ -6,6 +6,7 @@ module.exports = {
   description: "",
   category: "image",
   cooldown: 2,
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const text = args.join(" ");

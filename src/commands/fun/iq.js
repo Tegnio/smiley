@@ -5,6 +5,7 @@ module.exports = {
   description: "",
   category: "fun",
   cooldown: 2,
+  botPermissions: ["EMBED_LINKS"],
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
     const iq = Math.floor(Math.random() * 160) + 1;

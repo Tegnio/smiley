@@ -7,6 +7,7 @@ module.exports = {
   category: "useful",
   cooldown: 5,
   aliases: ["gh"],
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const username = args[0];

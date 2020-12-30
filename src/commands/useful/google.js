@@ -6,6 +6,7 @@ module.exports = {
   category: "useful",
   aliases: ["lmgtfy"],
   cooldown: 5,
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const query = encodeURIComponent(args.join(" "));

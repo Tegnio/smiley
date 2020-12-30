@@ -7,6 +7,7 @@ module.exports = {
   category: "fun",
   aliases: ["magic"],
   cooldown: 2,
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const member = bot.findMember(message, args, true);

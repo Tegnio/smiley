@@ -6,6 +6,7 @@ module.exports = {
   description: "",
   category: "fun",
   cooldown: 2,
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message) {
     const lang = await bot.getGuildLang(message.guild.id);
     const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);

@@ -7,6 +7,7 @@ module.exports = {
   category: "useful",
   cooldown: 2,
   aliases: ["clr"],
+  botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const rcolor = Math.floor(Math.random()*16777215).toString(16);

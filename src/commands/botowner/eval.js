@@ -6,6 +6,7 @@ module.exports = {
   category: "botowner",
   ownerOnly: true,
   aliases: ["e"],
+  botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const toEval = args.join(" ");
