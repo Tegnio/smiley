@@ -1,4 +1,4 @@
-const math = require("math-expression-evaluator");
+const math = require("mathjs");
 const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
@@ -9,9 +9,17 @@ module.exports = {
   cooldown: 2,
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    const sum = args[0];
+    const sum = args[];
     try {
-      const calculation = math.eval(sum);
+      if (!sum) {
+        return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
+      }
+
+      const calculation = math.evaluate(sum
+          .replace(/[x]/gi, "*")
+          .replace(/[,]/g, ".")
+          .replace(/[÷]/gi, "/")
+      );
 
       const embed = BaseEmbed(message)
         .setTitle(lang.OTHER.CALC)
