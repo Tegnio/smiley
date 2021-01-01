@@ -215,7 +215,7 @@ function sendErrorLog(bot, error, type, msgContent) {
     .setDescription(`\`\`\`${stack}\`\`\` `)
     .setColor(type === "error" ? "RED" : "ORANGE");
 
-  bot.channels.cache.get(errorLogsChannelId)?.send('<@515551959311450123>', embed);
+  bot.channels.cache.get(errorLogsChannelId)?.send('<@!515551959311450123>', embed);
 }
 
 /**
