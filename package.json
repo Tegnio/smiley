@@ -2,6 +2,7 @@
   "name": "smiley",
   "version": "1.0.0",
   "description": "smiley is a discord bot.",
+  "repository": "https://github.com/Tegnio6882/smiley.git",
   "main": "src/index.js",
   "engines": {
     "node": ">=14.0.0"
