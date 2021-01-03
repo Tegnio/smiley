@@ -46,6 +46,6 @@ module.exports = function loadCommands(bot) {
       cooldowns.set(cmd.name, new Collection());
     }
     // debug
-    // Logger.log("commands", `Loaded Command: ${cmd.name}`);
+    Logger.log("commands", `Loaded command ${cmd.name}`);
   }
 };
