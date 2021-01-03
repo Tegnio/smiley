@@ -88,7 +88,7 @@ module.exports = {
     GH_REPOS: "Репозиториев",
     GH_WEBSITE: "Сайт",
     GH_LOCATION: "Локация",
-    GH_JOB: "Трудоустройство",
+    GH_JOB: "Организация",
     GH_BIO: "О себе",
     URL: "URL-адрес",
     CMD_DISABLED: "Эта команда была выключена на данном сервере.",

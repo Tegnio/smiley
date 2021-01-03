@@ -88,7 +88,7 @@ module.exports = {
     GH_REPOS: "Repositories",
     GH_WEBSITE: "Website",
     GH_LOCATION: "Location",
-    GH_JOB: "Employment",
+    GH_JOB: "Organization",
     GH_BIO: "Bio",
     URL: "URL",
     CMD_DISABLED: "This command was disabled on this server.",
