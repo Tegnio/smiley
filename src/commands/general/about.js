@@ -38,7 +38,6 @@ module.exports = {
       .addField(lang.BOT.VOTE,
       `
       [Bots S-D.C](https://bots.server-discord.com/781179810700984330)
-      [Top Bots List](https://tbl.click/smiley)
       [TopCord](https://bots.topcord.ru/bots/781179810700984330)
       [BotiCord](https://boticord.top/bot/781179810700984330)
       [Top.gg](https://top.gg/bot/781179810700984330)
