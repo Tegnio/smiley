@@ -53,5 +53,5 @@ module.exports = function loadCommands(bot) {
       // debug
       // Logger.log("commands", `Loaded ${cmd.name}`);
     }
-  }
+  });
 };
