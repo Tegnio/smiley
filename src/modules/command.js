@@ -54,6 +54,6 @@ module.exports = function loadCommands(bot) {
       // Logger.log("commands", `Loaded ${cmd.name}`);
     }
     // debug
-    Logger.log("commands", `Loaded command ${cmd.name}`);
+    // Logger.log("commands", `Loaded Command: ${cmd.name}`);
   }
 };
