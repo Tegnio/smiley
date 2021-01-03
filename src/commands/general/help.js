@@ -22,15 +22,15 @@ module.exports = {
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
 
-      const description = cmd.description ? cmd.description : lang.GLOBAL.NONE;
+      const description = cmd.description ? cmd.description : lang.GLOBAL.NOT_SPECIFIED;
       const aliases = cmd.aliases
         ? cmd.aliases.map((alias) => alias)
         : lang.GLOBAL.NONE;
       const cooldown = cmd.cooldown ? `${cmd.cooldown} ${lang.TIME.SECONDS}` : lang.GLOBAL.NONE;
       const usage = cmd.usage ? cmd.usage : lang.GLOBAL.NOT_SPECIFIED;
       const memberPerms = !cmd.memberPermissions
-        ? lang.GLOBAL.NONE
-        : [...cmd.memberPermissions].map((p) => p);
+        ? ["SEND_MESSAGES"].map((p) => p)
+        : [...cmd.memberPermissions, "SEND_MESSAGES"].map((p) => p);
       const botPerms = !cmd.botPermissions
         ? ["SEND_MESSAGES"].map((p) => p)
         : [...cmd.botPermissions, "SEND_MESSAGES"].map((p) => p);
