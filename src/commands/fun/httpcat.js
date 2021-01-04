@@ -12,7 +12,7 @@ module.exports = {
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const status = args[0];
-    const image = `https://http.cat/${status}.jpg`;
+    const image = `https://http.cat/${status}`;
 
     if (!status) {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
