@@ -7,7 +7,7 @@ module.exports = {
   name: "help",
   description: "",
   category: "general",
-  aliases: ["cmds", "h"],
+  aliases: ["h"],
   cooldown: 2,
   botPermissions: ["EMBED_LINKS"],
   async execute(bot, message, args) {
