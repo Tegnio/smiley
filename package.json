@@ -20,6 +20,7 @@
     "discord-giveaways": "^4.4.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
+    "erlpack": "^0.1.3",
     "google-play-scraper": "^8.0.2",
     "mathjs": "^8.1.1",
     "moment": "^2.29.1",
@@ -28,7 +29,7 @@
     "ms": "^2.1.3",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.6",
-    "utf-8-validate": "^5.0.3",
+    "utf-8-validate": "^5.0.4",
     "zlib-sync": "^0.1.7"
   }
 }
