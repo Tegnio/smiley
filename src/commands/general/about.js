@@ -16,7 +16,7 @@ module.exports = {
       .setAuthor(lang.BOT.ABOUT, avatar)
       .addField(lang.BOT.DEVELOPER,
         `
-        [Tegnio#6882](https://tegnio.carrd.co/)
+        [${bot.users.cache.get('515551959311450123').tag}](https://tegnio.carrd.co/)
         `, true)
       .addField(lang.BOT.PLATFORM, `${process.platform} / ${process.arch}`, true)
       .addField(lang.BOT.LATENCY, `${Math.round(bot.ws.ping)} ${lang.TIME.MILLISECONDS}`, true)
