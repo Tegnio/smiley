@@ -11,13 +11,14 @@ module.exports = {
   memberPermissions: [],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const status = args[0];
     const image = `https://http.cat/${status}.jpg`;
 
     if (!status) {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
     }
+
+    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
 
     const embed = BaseEmbed(message)
     .setTitle(lang.IMAGE.FAILED_TO_LOAD)
