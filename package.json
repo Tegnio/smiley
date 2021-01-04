@@ -15,12 +15,11 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "bufferutil": "^4.0.3",
     "chalk": "^4.1.0",
     "discord-giveaways": "^4.4.2",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "erlpack": "^0.1.3",
+    "erlpack": "github:discord/erlpack",
     "google-play-scraper": "^8.0.2",
     "mathjs": "^8.1.1",
     "moment": "^2.29.1",
@@ -28,8 +27,6 @@
     "mongoose": "^5.11.9",
     "ms": "^2.1.3",
     "node-fetch": "^2.6.1",
-    "nodemon": "^2.0.6",
-    "utf-8-validate": "^5.0.4",
-    "zlib-sync": "^0.1.7"
+    "nodemon": "^2.0.6"
   }
 }
