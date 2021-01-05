@@ -4,7 +4,7 @@ module.exports = {
   name: "quote",
   description: "",
   category: "fun",
-  aliases: [],
+  aliases: [""],
   cooldown: 2,
   usage: "quote <text>",
   botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
