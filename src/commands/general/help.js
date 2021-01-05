@@ -27,7 +27,7 @@ module.exports = {
         ? cmd.aliases.map((alias) => alias)
         : lang.GLOBAL.NONE;
       const cooldown = cmd.cooldown ? `${cmd.cooldown} ${lang.TIME.SECONDS}` : lang.GLOBAL.NONE;
-      const usage = cmd.usage ? cmd.usage : lang.GLOBAL.NOT_SPECIFIED;
+      const usage = prefix + cmd.usage ? prefix + cmd.usage : lang.GLOBAL.NOT_SPECIFIED;
       const memberPerms = !cmd.memberPermissions
         ? ["SEND_MESSAGES"].map((p) => p)
         : [...cmd.memberPermissions, "SEND_MESSAGES"].map((p) => p);

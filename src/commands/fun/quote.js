@@ -10,7 +10,7 @@ module.exports = {
   memberPermissions: [],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
-    const quote = args[0];
+    const quote = args.join(" ");
 
     if (!quote) {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
