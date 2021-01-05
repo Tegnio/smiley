@@ -13,12 +13,17 @@ module.exports = {
     const lang = await bot.getGuildLang(message.guild.id);
     const quote = args[0];
 
-    if (!args) {
+    if (!quote) {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
+    };
+    if (quote.length > 1024) {
+      return message.channel.send(lang.GLOBAL.LONG_ARGS
+      .replace("{length}", quote.length)
+      .replace("{limit}", "1024"))
     }
 
     const embed = BaseEmbed(message)
-    .setDescription(`**${quote}**\n\n© ${message.author.tag}`);
+    .setDescription(`**${quote}**`);
 
     message.channel.send(embed);
     message.delete();
