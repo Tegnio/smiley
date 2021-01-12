@@ -78,7 +78,7 @@ module.exports = {
         }
 
         if (cmd.ownerOnly && !owners.includes(message.author.id)) {
-          return message.channel.send(lang.HELP.OWNER_ONLY);
+          return;
         }
 
         // botPermissions
