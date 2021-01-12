@@ -1,8 +1,8 @@
 require("./utils/database");
 const { Collection, Client } = require("discord.js");
-const { token } = require("../config.json");
+const { token, sdcApiKey } = require("../config.json");
 const { GiveawaysManager } = require("discord-giveaways");
-const fetch = require("node-fetch");
+const SDC = require("@megavasiliy007/sdc-api");
 const { findMember, getGuildLang, sendErrorLog } = require("./utils/functions");
 
 const bot = new Client({
@@ -18,6 +18,7 @@ bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.cooldowns = new Collection();
 bot.findMember = findMember;
+bot.sdc = new SDC(sdcApiKey);
 
 require("moment-duration-format");
 require("./modules/command")(bot);

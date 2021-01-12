@@ -15,6 +15,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
+    "@megavasiliy007/sdc-api": "github:MegaVasiliy007/sdc-api",
     "chalk": "^4.1.0",
     "discord-giveaways": "^4.4.2",
     "discord.js": "^12.5.1",
