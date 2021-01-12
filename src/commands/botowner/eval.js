@@ -19,16 +19,14 @@ module.exports = {
       });
       const type = eevaled[0].toUpperCase() + eevaled.slice(1);
 
-      const embed = BaseEmbed(message).setTitle(lang.OTHER.EVAL)
-        .setDescription(`\`${lang.OTHER.EVAL_TYPE}:\` ${type}
-\`${lang.OTHER.EVAL_INPUT}:\` \`\`\`js\n${toEval} \`\`\`
-\`${lang.OTHER.EVAL_OUTPUT}:\` \`\`\`js\n${evaled}\`\`\``);
+      const embed = BaseEmbed(message)
+        .setDescription(`\`\`\`js\n${evaled}\`\`\``);
 
       message.channel.send(embed);
     } catch (error) {
       const errorEmbed = BaseEmbed(message)
         .setTitle(lang.GLOBAL.ERROR)
-        .setDescription(`\`\`\`${error}\`\`\``);
+        .setDescription(`\`\`\`rb\n${error}\`\`\``);
 
       message.channel.send(errorEmbed);
     }
