@@ -71,7 +71,8 @@ module.exports = {
 
         if (disabledCommands !== null && disabledCommands.length > 0) {
           if (disabledCommands?.includes(cmd.name)) {
-            return message.channel.send(lang.OTHER.CMD_DISABLED);
+            return message.channel.send(lang.OTHER.CMD_DISABLED
+            .replace("{command}", cmd.name));
           }
         }
 

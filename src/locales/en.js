@@ -126,7 +126,7 @@ module.exports = {
     GH_JOB: "Organization",
     GH_BIO: "Bio",
     URL: "URL",
-    CMD_DISABLED: "This command was disabled on this server.",
+    CMD_DISABLED: "The **{command}** was disabled on this server.",
     CALC: "Calculator",
     CALC_ERR: "An error has occurred while performing the calculations.",
   },

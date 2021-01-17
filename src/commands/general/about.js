@@ -40,7 +40,7 @@ module.exports = {
         [BotiCord](https://boticord.top/bot/781179810700984330)
         [Top.gg](https://top.gg/bot/781179810700984330)
         `, true)
-        .addField(lang.BOT.SPECIAL_THANKS,
+        .addField(lang.BOT.ACKNOWLEDGMENTS,
 `\`\`\`rb
 [ElectroPlayer ✔]#0256 [ID: 283666032823107585]
 CasperTheGhost#4546 [ID: 406323530301571072]\`\`\`
