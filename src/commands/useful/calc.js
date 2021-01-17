@@ -3,7 +3,6 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "calc",
-  description: "",
   category: "useful",
   aliases: ["math"],
   cooldown: 2,
@@ -16,6 +15,7 @@ module.exports = {
         return message.channel.send(lang.GLOBAL.PROVIDE_ARGS)
       }
 
+      message.channel.startTyping();
       const calculation = math.evaluate(sum
           .replace(/[x]/gi, "*")
           .replace(/[×]/gi, "*")
@@ -35,8 +35,9 @@ module.exports = {
           `\`\`\`js\n${calculation}\`\`\``
         );
 
-      message.channel.send(embed);
-    } catch (e) {
+        message.channel.stopTyping(true);
+        message.channel.send(embed);
+      } catch (e) {
       return message.channel.send(lang.OTHER.CALC_ERR);
     }
   },

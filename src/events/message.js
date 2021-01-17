@@ -39,7 +39,6 @@ module.exports = {
     if (!prefix.test(message.content) || message.author.bot || userId === bot.user.id)
       return;
 
-
     const [, matchedPrefix] = message.content.match(prefix);
     const args = message.content
       .slice(matchedPrefix.length)
@@ -48,7 +47,6 @@ module.exports = {
     const command = args.shift().toLowerCase();
 
     if (message.mentions.has(bot.user.id) && !command) {
-
       message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
     }
 
@@ -93,7 +91,7 @@ module.exports = {
           if (neededPermissions[0]) {
             return message.channel.send(lang.BOT.NEED_PERMS
               .replace("{neededPermissions}", neededPermissions
-                .map((p) => `\`${p.toUpperCase()}\``)
+                .map((p) => lang.PERMISSIONS[p.toUpperCase()])
                 .join(", ")));
           }
         }
@@ -110,7 +108,7 @@ module.exports = {
           if (neededPermissions.length > 0) {
             return message.channel.send(lang.MEMBER.NEED_PERMS
               .replace("{neededPermissions}", neededPermissions
-                .map((p) => `\`${p.toUpperCase()}\``)
+                .map((p) => lang.PERMISSIONS[p.toUpperCase()])
                 .join(", "))
             );
           }

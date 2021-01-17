@@ -3,14 +3,14 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "hthigh",
-  description: "",
   category: "nsfw",
+  aliases: ["ht"],
   cooldown: 5,
   nsfwOnly: true,
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message) {
+    message.channel.startTyping();
     const lang = await bot.getGuildLang(message.guild.id);
-    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
     const data = await fetch(
       "https://nekobot.xyz/api/image?type=hthigh"
     ).then((res) => res.json());
@@ -20,9 +20,7 @@ module.exports = {
     .setURL(data.message)
     .setImage(data.message);
 
-    setTimeout(() => {
-      message.channel.send(embed);
-      wait_msg.delete();
-    }, 100);
+    message.channel.stopTyping(true);
+    message.channel.send(embed);
   },
 };

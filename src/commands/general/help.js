@@ -20,25 +20,26 @@ module.exports = {
     if (cmdArgs) {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
-      if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND);
+      if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND
+          .replace("{command}", cmdArgs));
 
-      const description = cmd.description ? cmd.description : lang.GLOBAL.NOT_SPECIFIED;
+      const description = lang.DESCRIPTIONS[cmd.name.toUpperCase()] || lang.HELP.NO_DESCRIPTION;
       const aliases = cmd.aliases
-        ? cmd.aliases.map((alias) => alias)
+        ? cmd.aliases.map((alias) => `\`${alias}\``).join(", ")
         : lang.GLOBAL.NONE;
       const cooldown = cmd.cooldown ? `${cmd.cooldown} ${lang.TIME.SECONDS}` : lang.GLOBAL.NONE;
-      const usage = prefix + cmd.usage ? prefix + cmd.usage : lang.GLOBAL.NOT_SPECIFIED;
+      const usage = cmd.usage ? `${prefix}${cmd.name} ${cmd.usage}` : lang.GLOBAL.NOT_SPECIFIED;
       const memberPerms = !cmd.memberPermissions
-        ? ["SEND_MESSAGES"].map((p) => p)
-        : [...cmd.memberPermissions, "SEND_MESSAGES"].map((p) => p);
+        ? ["SEND_MESSAGES"].map((p) => lang.PERMISSIONS[p.toUpperCase()])
+        : [...cmd.memberPermissions, "SEND_MESSAGES"].map((p) => lang.PERMISSIONS[p.toUpperCase()]);
       const botPerms = !cmd.botPermissions
-        ? ["SEND_MESSAGES"].map((p) => p)
-        : [...cmd.botPermissions, "SEND_MESSAGES"].map((p) => p);
+        ? ["SEND_MESSAGES"].map((p) => lang.PERMISSIONS[p.toUpperCase()])
+        : [...cmd.botPermissions, "SEND_MESSAGES"].map((p) => lang.PERMISSIONS[p.toUpperCase()]);
 
       const embed = BaseEmbed(message)
         .setTitle(`\`${cmd.name}\``)
-        .setDescription(`${lang.HELP.DESCRIPTION}: ${description}`)
-        .addField(lang.HELP.CATEGORY, cmd.category, true)
+        .setDescription(description)
+        .addField(lang.HELP.CATEGORY, lang.HELP[cmd.category.toUpperCase()], true)
         .addField(lang.HELP.ALIASES, aliases, true)
         .addField(lang.HELP.COOLDOWN, cooldown, true)
         .addField(lang.HELP.USAGE, usage)

@@ -2,11 +2,9 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "notstonks",
-  description: "Allows you to get a Not stonks image with somebody's (or yours) avatar",
   category: "fun",
   aliases: ["nst"],
   cooldown: 2,
-  args: "[user]",
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
     message.channel.startTyping();

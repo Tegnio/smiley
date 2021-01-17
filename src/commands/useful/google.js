@@ -21,15 +21,13 @@ module.exports = {
         .replace("{limit}", "256"));
     }
 
-    const wait_msg = await message.channel.send(lang.OTHER.PROCESSING);
+    message.channel.startTyping();
     const embed = BaseEmbed(message)
     .setAuthor(lang.OTHER.GOOGLE_SEARCH, `https://i.imgur.com/Ek1Qm3w.png`)
     .setTitle(decodeURIComponent(query))
     .setURL(url);
 
-    setTimeout(() => {
-      message.channel.send(embed);
-      wait_msg.delete();
-    }, 100);
+    message.channel.stopTyping(true);
+    message.channel.send(embed);
   },
 };

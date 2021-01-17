@@ -3,11 +3,35 @@ const { Collection, Client } = require("discord.js");
 const { token, sdcApiKey } = require("../config.json");
 const { GiveawaysManager } = require("discord-giveaways");
 const SDC = require("@megavasiliy007/sdc-api");
-const { findMember, getGuildLang, sendErrorLog } = require("./utils/functions");
-
+const {
+  findMember,
+  getGuildLang,
+  sendErrorLog,
+  getLanguages,
+  formatDate,
+  getGuildById,
+  updateUserById,
+  getUserById,
+  formatNumber,
+  toCapitalize,
+} = require("./utils/functions");
 const bot = new Client({
   disableMentions: "everyone",
   partials: ["GUILD_MEMBER", "MESSAGE", "USER"],
+});
+
+[
+  findMember,
+  getGuildLang,
+  getLanguages,
+  formatDate,
+  getGuildById,
+  updateUserById,
+  getUserById,
+  formatNumber,
+  toCapitalize,
+].forEach((func) => {
+  bot[func.name] = func;
 });
 
 // Locale - Language

@@ -5,7 +5,7 @@ module.exports = {
   description: "",
   category: "useful",
   cooldown: 5,
-  botPermissions: ["ADD_REACTIONS", "EMBED_LINKS", "MANAGE_MESSAGES"],
+  botPermissions: ["ADD_REACTIONS", "EMBED_LINKS"],
   async execute(bot, message, args) {
     const lang = await bot.getGuildLang(message.guild.id);
     const question = args.join(" ");
@@ -19,12 +19,13 @@ module.exports = {
         .replace("{limit}", "256"));
     }
 
+    message.channel.startTyping();
     const embed = BaseEmbed(message)
     .setTitle(question);
 
+    message.channel.stopTyping(true);
     const sendMessage = await message.channel.send(embed);
 
-    message.delete();
     sendMessage.react("👍");
     sendMessage.react("👎");
     sendMessage.react("🤷");

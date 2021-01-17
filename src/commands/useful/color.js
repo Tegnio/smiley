@@ -1,14 +1,13 @@
 const BaseEmbed = require("../../modules/BaseEmbed");
-const { getGuildById } = require("../../utils/functions");
 
 module.exports = {
   name: "color",
-  description: "",
   category: "useful",
   cooldown: 2,
   aliases: ["clr"],
   botPermissions: ["ATTACH_FILES", "EMBED_LINKS"],
   async execute(bot, message, args) {
+    message.channel.startTyping();
     const lang = await bot.getGuildLang(message.guild.id);
     const rcolor = Math.floor(Math.random()*16777215).toString(16);
     const url = `https://some-random-api.ml/canvas/colorviewer?hex=`;
@@ -20,6 +19,7 @@ module.exports = {
       .setThumbnail(url + rcolor)
       .setTitle(`#${rcolor}`);
 
+      message.channel.stopTyping(true);
       message.channel.send(embed);
     } else if(color.length > 6) {
         return message.channel.send(lang.GLOBAL.LONG_ARGS
@@ -31,7 +31,8 @@ module.exports = {
         .setThumbnail(url + color)
         .setTitle(`#${color}`);
 
-      message.channel.send(embed);
+        message.channel.stopTyping(true);
+        message.channel.send(embed);;
     };
   },
 };

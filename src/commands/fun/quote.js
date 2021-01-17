@@ -2,13 +2,11 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "quote",
-  description: "",
   category: "fun",
   cooldown: 2,
-  usage: "quote <text>",
   botPermissions: ["EMBED_LINKS", "MANAGE_MESSAGES"],
-  memberPermissions: [],
   async execute(bot, message, args) {
+    message.channel.startTyping();
     const lang = await bot.getGuildLang(message.guild.id);
     const quote = args.join(" ");
 
@@ -24,7 +22,7 @@ module.exports = {
     const embed = BaseEmbed(message)
     .setDescription(`**${quote}**`);
 
+    message.channel.stopTyping(true);
     message.channel.send(embed);
-    message.delete();
   },
 };

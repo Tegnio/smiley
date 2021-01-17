@@ -6,6 +6,7 @@ const Logger = require("../modules/Logger");
 // eslint-disable-next-line no-unused-vars
 const { Message, Client } = require("discord.js");
 const { errorLogsChannelId } = require("../../config.json");
+const fs = require("fs");
 
 /**
  *
@@ -183,14 +184,14 @@ async function getGuildLang(guildId) {
 }
 
 /**
- * @param {Client} bot
- * @param {Message} message
- * @param {"error"} type
+ * @param {import("discord.js").Client} bot
+ * @param {"warning" | "error"} type
  * @param {?string} msgContent
  */
 function sendErrorLog(bot, error, type, msgContent) {
-  if (!errorLogsChannelId) {
-    Logger.error("UNHANDLED ERROR", error);
+  const channel = bot.channels.cache.get(errorLogsChannelId);
+  if (!channel || !errorLogsChannelId) {
+    return Logger.error("UNHANDLED ERROR", error);
   }
 
   const message = {
@@ -200,22 +201,25 @@ function sendErrorLog(bot, error, type, msgContent) {
   const name = error.name || "N/A";
   const code = error.code || "N/A";
   const httpStatus = error.httpStatus || "N/A";
-  const stack = error.stack || "N/A";
+  let stack = error.stack || error;
   const content = msgContent || "N/A";
 
-  console.log(error);
+  if (stack.length >= 2048) {
+    console.error(stack);
+    stack = "An error occurred but was too long to send to Discord, check your console.";
+  }
 
   const embed = BaseEmbed(message)
     .setTitle("An error occurred")
     .addField("Name", name, true)
     .addField("Code", code, true)
     .addField("httpStatus", httpStatus, true)
-    .addField("Timestamp", Logger.fullDate(), true)
-    .addField("Command executed", content)
+    .addField("Timestamp", Logger.now, true)
+    .addField("Command executed", content, true)
     .setDescription(`\`\`\`${stack}\`\`\` `)
     .setColor(type === "error" ? "RED" : "ORANGE");
 
-  bot.channels.cache.get(errorLogsChannelId)?.send('<@!515551959311450123>', embed);
+  channel.send(embed);
 }
 
 /**
@@ -230,6 +234,17 @@ const formatDate = (date) => moment(date).format("DD.MM.YYYY, HH:mm:ss");
  */
 const toCapitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
+function getLanguages() {
+  return fs
+    .readdirSync("./src/locales/")
+    .filter((f) => f.endsWith(".js"))
+    .map((la) => la.slice(0, -3));
+}
+
+function formatNumber(n) {
+  return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
+}
+
 module.exports = {
   sendErrorLog,
   formatDate,
@@ -243,5 +258,7 @@ module.exports = {
   updateGuildById,
   removeGuild,
   findMember,
+  getLanguages,
+  formatNumber,
   getGuildLang,
 };
