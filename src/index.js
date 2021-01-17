@@ -4,16 +4,21 @@ const { token, sdcApiKey } = require("../config.json");
 const { GiveawaysManager } = require("discord-giveaways");
 const SDC = require("@megavasiliy007/sdc-api");
 const {
-  findMember,
-  getGuildLang,
   sendErrorLog,
-  getLanguages,
   formatDate,
-  getGuildById,
-  updateUserById,
-  getUserById,
-  formatNumber,
   toCapitalize,
+  getUserById,
+  addGuild,
+  addUser,
+  removeUser,
+  updateUserById,
+  getGuildById,
+  updateGuildById,
+  removeGuild,
+  findMember,
+  getLanguages,
+  formatNumber,
+  getGuildLang,
 } = require("./utils/functions");
 const bot = new Client({
   disableMentions: "everyone",
@@ -21,16 +26,21 @@ const bot = new Client({
 });
 
 [
-  findMember,
-  getGuildLang,
   sendErrorLog,
-  getLanguages,
   formatDate,
-  getGuildById,
-  updateUserById,
-  getUserById,
-  formatNumber,
   toCapitalize,
+  getUserById,
+  addGuild,
+  addUser,
+  removeUser,
+  updateUserById,
+  getGuildById,
+  updateGuildById,
+  removeGuild,
+  findMember,
+  getLanguages,
+  formatNumber,
+  getGuildLang,
 ].forEach((func) => {
   bot[func.name] = func;
 });
