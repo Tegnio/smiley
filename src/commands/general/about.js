@@ -28,13 +28,13 @@ module.exports = {
         `
         [${lang.BOT.SUPPORT_SERVER}](https://discord.gg/FJmgqt2ktg)
         [${lang.BOT.ADD}](https://discord.com/api/oauth2/authorize?client_id=781179810700984330&permissions=8&scope=bot)
-        **${lang.BOT.USED_APIS}**:
+        **${lang.BOT.USED_APIS}**
         [NekoBot API](https://nekobot.xyz/api/)
         [Nekos.life](https://nekos.life/api/v2/endpoints/)
         [No API Key](https://no-api-key.com/)
         [Some Random API](https://some-random-api.ml/)
         [Useless API](https://useless-api--vierofernando.repl.co/)
-        **${lang.BOT.VOTE}**:
+        **${lang.BOT.VOTE}**
         [Bots S-D.C](https://bots.server-discord.com/781179810700984330)
         [TopCord](https://bots.topcord.ru/bots/781179810700984330)
         [BotiCord](https://boticord.top/bot/781179810700984330)

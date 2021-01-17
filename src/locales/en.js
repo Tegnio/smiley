@@ -24,6 +24,7 @@ module.exports = {
     ADD: "Click here to add me",
     USED_APIS: "Used APIs",
     VOTE: "Vote for me",
+    ACKNOWLEDGMENTS: "Acknowlegdements",
     NO_PERMS: "It seems to me that I don't have some permissions in order to work properly.\nPlease kick & re-invite me using this link:\n{link}",
     NEED_PERMS: "I need more permissions to execute this command: {neededPermissions}",
   },

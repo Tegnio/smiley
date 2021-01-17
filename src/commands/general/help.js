@@ -1,7 +1,6 @@
 const { getGuildById } = require("../../utils/functions");
 const { owners } = require("../../../config.json");
 const BaseEmbed = require("../../modules/BaseEmbed");
-const categories = require("../../data/categories.json");
 
 module.exports = {
   name: "help",
@@ -21,7 +20,7 @@ module.exports = {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND
-          .replace("{command}", cmdArgs));
+          .replace("{command}", cmdArgs.join(" ")));
 
       const description = lang.DESCRIPTIONS[cmd.name.toUpperCase()] || lang.HELP.NO_DESCRIPTION;
       const aliases = cmd.aliases
