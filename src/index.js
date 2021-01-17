@@ -23,6 +23,7 @@ const bot = new Client({
 [
   findMember,
   getGuildLang,
+  sendErrorLog,
   getLanguages,
   formatDate,
   getGuildById,

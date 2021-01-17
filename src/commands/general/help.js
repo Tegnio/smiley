@@ -20,7 +20,7 @@ module.exports = {
       const cmd =
         bot.commands.get(cmdArgs) || bot.commands.get(bot.aliases.get(cmdArgs));
       if (!cmd) return message.channel.send(lang.HELP.CMD_NOT_FOUND
-          .replace("{command}", cmdArgs.join(" ")));
+          .replace("{command}", args.join(" ")));
 
       const description = lang.DESCRIPTIONS[cmd.name.toUpperCase()] || lang.HELP.NO_DESCRIPTION;
       const aliases = cmd.aliases

@@ -165,6 +165,7 @@ function findMember(message, args, allowAuthor) {
       message.guild.members.cache.get(args[0]) ||
       message.guild.members.cache.find((m) => m.user.id === args[0]) ||
       message.guild.members.cache.find((m) => m.user.tag === args[0]) ||
+      message.guild.members.cache.find((m) => m.user.username === args[0]) ||
       (allowAuthor === true ? message.member : null)
   );
 }
@@ -214,7 +215,7 @@ function sendErrorLog(bot, error, type, msgContent) {
     .addField("Name", name, true)
     .addField("Code", code, true)
     .addField("httpStatus", httpStatus, true)
-    .addField("Timestamp", Logger.now, true)
+    .addField("Timestamp", Logger.now(), true)
     .addField("Command executed", content, true)
     .setDescription(`\`\`\`${stack}\`\`\` `)
     .setColor(type === "error" ? "RED" : "ORANGE");
