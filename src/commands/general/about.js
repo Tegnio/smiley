@@ -27,7 +27,7 @@ module.exports = {
       .addField(lang.BOT.USEFUL_LINKS,
         `
         [${lang.BOT.SUPPORT_SERVER}](https://discord.gg/FJmgqt2ktg)
-        [${lang.BOT.ADD}](https://discord.com/api/oauth2/authorize?client_id=781179810700984330&permissions=8&scope=bot)
+        [${lang.BOT.ADD}](https://discord.com/api/oauth2/authorize?client_id=781179810700984330&permissions=1177939008&scope=bot)
         **${lang.BOT.USED_APIS}**
         [NekoBot API](https://nekobot.xyz/api/)
         [Nekos.life](https://nekos.life/api/v2/endpoints/)
