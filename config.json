@@ -1,7 +1,6 @@
 {
-    "token": "NzgxMTc5ODEwNzAwOTg0MzMw.X754ZA.FUDNqdV8Lrb3JOtuz39JCRs9hvE",
+    "token": "NzgxMTc5ODEwNzAwOTg0MzMw.X754ZA.b5gVv5eyjMqj7b9bHO93pRXgiHE",
     "owners": ["515551959311450123"],
-    "feedBackChannelId": "785804413619929098",
     "mongodbUri": "mongodb+srv://smiley:hHoXU5BIXV8c1KUm@cluster0.clc8r.mongodb.net/smiley1126?retryWrites=true&w=majority",
     "errorLogsChannelId": "785804374092939275",
     "sdcApiKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4MTE3OTgxMDcwMDk4NDMzMCIsInBlcm1zIjowLCJpYXQiOjE2MDgxMTc5NTh9.QslmpZZ7zNgu8XHPgCps4Gawn6xvbg4hC6Rcl9LMCgg",
