@@ -1,7 +1,7 @@
 require("./utils/database");
 const { Collection, Client } = require("discord.js");
 const { token, sdcApiKey } = require("../config.json");
-const { GiveawaysManager } = require("discord-giveaways");
+const { Player } = require("discord-player");
 const SDC = require("@megavasiliy007/sdc-api");
 const {
   sendErrorLog,
@@ -54,6 +54,14 @@ bot.aliases = new Collection();
 bot.cooldowns = new Collection();
 bot.findMember = findMember;
 bot.sdc = new SDC(sdcApiKey);
+bot.player = new Player(bot, {
+  autoSelfDeaf: true,
+  leaveOnEnd: false,
+  leaveOnEndCooldown: 60000,
+  leaveOnEmpty: false,
+  leaveOnEmptyCooldown: 60000,
+  leaveOnStop: true,
+});
 
 require("moment-duration-format");
 require("./modules/command")(bot);
