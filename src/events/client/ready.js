@@ -1,9 +1,9 @@
-const Logger = require("../modules/Logger");
+const Logger = require("../../modules/Logger");
 const fetch = require("node-fetch");
 const {
   sdcApiKey,
   boticordApiKey
-} = require("../../config.json");
+} = require("../../../config.json");
 
 module.exports = {
   name: "ready",
