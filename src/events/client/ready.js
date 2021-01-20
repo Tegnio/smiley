@@ -35,7 +35,7 @@ module.exports = {
           shards: bot.ws.totalShards,
           users: bot.users.cache.size
         })
-    }).then(r => r.json()).then(Logger.log("boticord"));
-    }, 1800000);
+    }).then(r => Logger.log("boticord", r));
+  }, 1800000);
   },
 };
