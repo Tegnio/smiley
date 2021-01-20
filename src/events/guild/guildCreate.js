@@ -8,8 +8,8 @@ module.exports = {
     bot.channels.cache.get('786683848830222357')
     .send(`:regional_indicator_a: Added guild **${guild.name}** (ID: **${guild.id}**)`);
 
-    if(guild.members.cache.size < 10) {
-      return guild.leave();
-    };
+    // if(guild.members.cache.size < 5) {
+    //  return guild.leave();
+    // };
   },
 };
