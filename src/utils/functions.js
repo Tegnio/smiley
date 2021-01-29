@@ -165,7 +165,6 @@ function findMember(message, args, allowAuthor) {
       message.guild.members.cache.get(args[0]) ||
       message.guild.members.cache.find((m) => m.user.id === args[0]) ||
       message.guild.members.cache.find((m) => m.user.tag === args[0]) ||
-      message.guild.members.cache.find((m) => m.user.username === args[0]) ||
       (allowAuthor === true ? message.member : null)
   );
 }
@@ -246,6 +245,11 @@ function formatNumber(n) {
   return n.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ");
 }
 
+function isHex(h) {
+  var a = parseInt(h, 16);
+  return (a.toString(16) === h.toLowerCase())
+}
+
 module.exports = {
   sendErrorLog,
   formatDate,
@@ -261,5 +265,6 @@ module.exports = {
   findMember,
   getLanguages,
   formatNumber,
+  isHex,
   getGuildLang,
 };

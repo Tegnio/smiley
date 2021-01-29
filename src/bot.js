@@ -1,8 +1,9 @@
 require("./utils/database");
 const { Collection, Client } = require("discord.js");
-const { token, sdcApiKey } = require("../config.json");
+const config = require("../config.json");
 const { Player } = require("discord-player");
-const SDC = require("@megavasiliy007/sdc-api");
+const SDC = require("sdc-api-wrapper");
+const fetch = require("node-fetch");
 const {
   sendErrorLog,
   formatDate,
@@ -18,6 +19,7 @@ const {
   findMember,
   getLanguages,
   formatNumber,
+  isHex,
   getGuildLang,
 } = require("./utils/functions");
 const bot = new Client({
@@ -40,6 +42,7 @@ const bot = new Client({
   findMember,
   getLanguages,
   formatNumber,
+  isHex,
   getGuildLang,
 ].forEach((func) => {
   bot[func.name] = func;
@@ -53,12 +56,12 @@ bot.commands = new Collection();
 bot.aliases = new Collection();
 bot.cooldowns = new Collection();
 bot.findMember = findMember;
-bot.sdc = new SDC(sdcApiKey);
+bot.sdc = new SDC(config.sdcApiKey);
 bot.player = new Player(bot, {
   autoSelfDeaf: true,
-  leaveOnEnd: false,
+  leaveOnEnd: true,
   leaveOnEndCooldown: 60000,
-  leaveOnEmpty: false,
+  leaveOnEmpty: true,
   leaveOnEmptyCooldown: 60000,
   leaveOnStop: true,
 });
@@ -67,7 +70,7 @@ require("moment-duration-format");
 require("./modules/command")(bot);
 require("./modules/events")(bot);
 
-bot.login(token);
+bot.login(config.token);
 
 // Unhandled errors
 process.on("unhandledRejection", (error) => sendErrorLog(bot, error, "error"));

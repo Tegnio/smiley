@@ -10,11 +10,11 @@ module.exports = {
       .setTitle(track.title)
       .setURL(track.url)
       .setThumbnail(track.thumbnail)
+      .addField(lang.OTHER.REQUESTED_BY, track.requestedBy.tag, true)
       .addField(lang.MUSIC.UPLOADED_BY, track.author, true)
       .addField(lang.MUSIC.DURATION, track.duration, true);
 
 
-      return message.channel.send(embed);
+      return message.reply(embed);
     },
   };
-  

@@ -141,8 +141,8 @@ module.exports = {
       } else {
         return;
       }
-    } catch (e) {
-      sendErrorLog(bot, e, "error", message.content);
+    } catch (error) {
+      sendErrorLog(bot, error, "error", message.content);
       const embed = BaseEmbed(message)
         .setTitle(lang.GLOBAL.ERROR)
         .setDescription(`\`\`\`js${e}\`\`\``);

@@ -58,6 +58,10 @@ module.exports = {
       .filter(({ category }) => category === "fun")
       .map(({ name }) => `\`${name}\``)
       .join(", ") || lang.GLOBAL.NOTHING;
+    const musicCmds = commands
+      .filter(({ category }) => category === "music")
+      .map(({ name }) => `\`${name}\``)
+      .join(", ") || lang.GLOBAL.NOTHING;
     const nsfwCmds = commands
       .filter(({ category }) => category === "nsfw")
       .map(({ name }) => `\`${name}\``)
@@ -74,6 +78,7 @@ module.exports = {
     const embed = BaseEmbed(message)
       .addField(lang.HELP.GENERAL, generalCmds)
       .addField(lang.HELP.FUN, funCmds)
+      .addField(lang.HELP.MUSIC, musicCmds)
       .addField(lang.HELP.USEFUL, usefulCmds);
     if (nsfw) {
       embed.addField(lang.HELP.NSFW, nsfwCmds);

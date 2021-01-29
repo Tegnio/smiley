@@ -2,39 +2,38 @@ const { updateGuildById, getGuildById } = require("../../utils/functions");
 
 module.exports = {
   name: "set",
-  description: "",
   category: "botowner",
+  botPermissions: ["ADD_REACTIONS", "EMBED_LINKS"],
   memberPermissions: ["ADMINISTRATOR"],
   ownerOnly: true,
   async execute(bot, message, args) {
-    const languages = bot.getLanguages();
     const guildId = message.guild.id;
+    const lang = await bot.getGuildLang(guildId);
+    const locales = bot.getLanguages();
     const { prefix } = await getGuildById(guildId);
     const option = args[0];
     const item = message.mentions.channels.first() || message.mentions.roles.first();
-    const language = args[1];
+    const locale = args[1];
 
     if (!option) {
       return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
 
     switch (option.toLowerCase()) {
-      case "language": {
-        if (!language) {
-          return message.channel.send(lang.LANG.PROVIDE_LANG);
-        } else if(language === 'list') {
-            return message.channel.send(
-            `${lang.LANG.LIST} ${languages
+      case "locale": {
+        if (!locale) {
+          return message.channel.send(
+            `${lang.LANG.LIST} ${locales
             .map((l) => `\`${l}\``)
             .join(", ")}`
           );
-        } else if(!languages.includes(language)) {
+        } else if(!languages.includes(locale)) {
           return message.channel.send(
-        `${lang.LANG.NOT_AVAILABLE} ${languages
+        `${lang.LANG.NOT_AVAILABLE} ${locale
           .map((l) => `\`${l}\``)
           .join(", ")}`
           );
-        } else updateItem("locale", language, guildId);
+        } else updateItem("locale", locale, guildId);
         message.react("✅")
         break;
       }

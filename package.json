@@ -1,6 +1,6 @@
 {
   "name": "smiley",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "smiley is a discord bot.",
   "repository": "https://github.com/Tegnio6882/smiley.git",
   "main": "src/index.js",
@@ -16,8 +16,8 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "@megavasiliy007/sdc-api": "github:MegaVasiliy007/sdc-api",
     "chalk": "^4.1.0",
+    "discord-giveaways": "^4.4.3",
     "discord-player": "^3.2.1",
     "discord.js": "^12.5.1",
     "ffmpeg": "0.0.4",
@@ -26,10 +26,11 @@
     "mathjs": "^8.1.1",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2",
-    "mongoose": "^5.11.12",
+    "mongoose": "^5.11.13",
     "ms": "^2.1.3",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
-    "ytdl-core": "^4.4.3"
+    "sdc-api-wrapper": "^1.1.9",
+    "ytdl-core": "^4.4.5"
   }
 }

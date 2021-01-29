@@ -4,7 +4,6 @@ const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
   name: "prefix",
-  description: "",
   category: "settings",
   cooldown: 2,
   memberPermissions: ["MANAGE_GUILD"],
@@ -14,25 +13,20 @@ module.exports = {
     const lang = await bot.getGuildLang(message.guild.id);
     const guild = await getGuildById(message.guild.id);
 
-    if (!prefix)
-      return message.channel.send(
-        `${lang.GLOBAL.SERVER_PREFIX}: \`${guild.prefix}\`\n${lang.OTHER.PREFIX_UPDATE.replace("{cmd}", `${guild.prefix}prefix <prefix>`)}`
-      );
-
-    if (message.author.id === ownerId) {
-      setPrefix(message, prefix);
-      message.react("✅");
-    } else if (message.member.permissions.has(["MANAGE_GUILD"])) {
-      setPrefix(message, prefix);
-      message.react("✅");
-    } else {
-      return message.channel.send(`<:err:786969738030612547> ${lang.MEMBER.NO_PERMS}`);
+    if (!prefix) {
+      return message.channel.send(lang.GLOBAL.PROVIDE_ARGS);
     }
+    if (prefix.length > 5) {
+      return message.channel.send(lang.OTHER.ARGS_VALUE_MAX
+      .replace("{max}", "5")
+      .replace("{got}", prefix.length));
+    }
+
+    setPrefix(message, prefix);
+    message.react("✅");
   },
 };
 
 async function setPrefix(message, prefix) {
   await updateGuildById(message.guild.id, { prefix });
-
-
 }
