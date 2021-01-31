@@ -32,7 +32,6 @@
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7",
     "sdc-api-wrapper": "^1.1.9",
-    "sodium": "^3.0.2",
     "ytdl-core": "^4.4.5"
   }
 }
