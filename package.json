@@ -16,7 +16,6 @@
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "@k3rn31p4nic/google-translate-api": "^1.1.1",
-    "bufferutil": "^4.0.3",
     "chalk": "^4.1.0",
     "discord-giveaways": "^4.4.3",
     "discord-player": "^3.2.1",
@@ -34,7 +33,6 @@
     "nodemon": "^2.0.7",
     "sdc-api-wrapper": "^1.1.9",
     "sodium": "^3.0.2",
-    "ytdl-core": "^4.4.5",
-    "zlib-sync": "^0.1.7"
+    "ytdl-core": "^4.4.5"
   }
 }
