@@ -1,4 +1,4 @@
-const moment = require("moment");
+const package = require("../../../package.json");
 const BaseEmbed = require("../../modules/BaseEmbed");
 
 module.exports = {
@@ -12,14 +12,14 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
 
     const embed = BaseEmbed(message)
-      .setAuthor(lang.BOT.ABOUT, avatar)
+      .setAuthor(`${bot.user.username} v${package.version}`, avatar)
       .addField(lang.BOT.GENERAL_INFO,
         `
         **${lang.BOT.PLATFORM}**: ${process.platform} (${process.arch})
         **${lang.BOT.LATENCY}**: ${bot.formatNumber(Math.round(bot.ws.ping))} ${lang.TIME.MILLISECONDS}
         **${lang.BOT.SHARDS}**: ${bot.formatNumber(bot.ws.totalShards)}
         **${lang.BOT.SERVERS}**: ${bot.formatNumber(bot.guilds.cache.size)}
-        **${lang.BOT.USERS}**: ${bot.formatNumber(bot.guilds.cache.reduce((a, g) => a + g.memberCount, 0))}
+        **${lang.BOT.USERS}**: ${bot.formatNumber(bot.users.cache.size)}
         **${lang.BOT.COMMANDS}**: ${bot.commands.size}
         **${lang.BOT.VOICE_CONNECTIONS}**: ${bot.formatNumber(bot.voice.connections.size)}
         `, true)
@@ -35,10 +35,11 @@ module.exports = {
         [Discord Boats](https://discord.boats/bot/781179810700984330)
         `, true)
         .addField(lang.BOT.ACKNOWLEDGMENTS,
-`\`\`\`rb
-[ElectroPlayer ✔]#0256 [ID: 283666032823107585]
-CasperTheGhost#4546 [ID: 406323530301571072]\`\`\`
-`);
+        [
+          "283666032823107585",
+          "406323530301571072",
+          "448799481777881089"
+        ].map((id) => `\`${bot.users.cache.get(id).username}\``).join(", "));
 
     message.channel.send(embed);
   },

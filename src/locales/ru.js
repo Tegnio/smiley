@@ -120,7 +120,7 @@ module.exports = {
   },
   MUSIC: {
     NOW_PLAYING: "Сейчас играет",
-    UPLOADED_BY: "Загружено",
+    UPLOADED_BY: "Загрузил",
     DURATION: "Длительность",
     VOLUME: "Громкость",
     PLAYBACK_PROGESS: "Прогресс воспроизведения",
@@ -145,7 +145,7 @@ module.exports = {
     TRACK_CANNOT_BE_SKIPPED: "Невозможно пропустить данный трек, так как он последний в очереди",
   },
   OTHER: {
-    REQUESTED_BY: "По просьбе",
+    REQUESTED_BY: "Запросил",
     GOOGLE_SEARCH: "Google Поиск",
     PREFIX_UPDATE: "Используйте `{cmd}` для установки нового префикса",
     PROCESSING: "Ваш запрос обрабатывается, подождите...",

@@ -19,7 +19,7 @@ module.exports = {
     if (!queue) {
       return message.channel.send(lang.MUSIC.EMPTY_QUEUE);
     }
-    if (queue.tracks.length < 1) {
+    if (queue.tracks.length === 1) {
       return message.channel.send(lang.MUSIC.TRACK_CANNOT_BE_SKIPPED);
     }
 
