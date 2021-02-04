@@ -12,7 +12,7 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
 
     const embed = BaseEmbed(message)
-      .setAuthor(`smiley v${package.version}`, avatar)
+      .setAuthor(`${bot.user.username} v${package.version}`, avatar)
       .addField(lang.BOT.GENERAL_INFO,
         `
         **${lang.BOT.PLATFORM}**: ${process.platform} (${process.arch})
@@ -34,12 +34,13 @@ module.exports = {
         [Discord Bots](https://discord.bots.gg/bots/781179810700984330)
         [Discord Boats](https://discord.boats/bot/781179810700984330)
         `, true)
-        .addField(lang.BOT.ACKNOWLEDGMENTS,
-        [
-          "283666032823107585",
-          "406323530301571072",
-          "448799481777881089"
-        ].map((id) => `\`${bot.users.cache.get(id).username}\``).join(", "));
+        .addField(lang.BOT.ACKNOWLEDGMENTS, `\`ElectroPlayer\`, \`CasperTheGhost\`, \`Xaliks\``);
+
+        // [
+        //  "283666032823107585",
+        //  "406323530301571072",
+        //  "448799481777881089"
+        // ].map((id) => `\`${bot.users.cache.get(id).username}\``).join(", ")
 
     message.channel.send(embed);
   },
