@@ -12,7 +12,7 @@ module.exports = {
     const avatar = bot.user.displayAvatarURL({ dynamic: true });
 
     const embed = BaseEmbed(message)
-      .setAuthor(`${bot.user.username} v${package.version}`, avatar)
+      .setAuthor(`smiley v${package.version}`, avatar)
       .addField(lang.BOT.GENERAL_INFO,
         `
         **${lang.BOT.PLATFORM}**: ${process.platform} (${process.arch})
