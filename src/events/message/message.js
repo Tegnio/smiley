@@ -1,13 +1,5 @@
-const {
-  getGuildById,
-  getUserById,
-  updateUserById,
-  errorEmbed,
-  sendErrorLog,
-} = require("../../utils/functions");
 const { owners } = require("../../../config.json");
 const BaseEmbed = require("../../modules/BaseEmbed");
-const Blacklist = require("../../models/Blacklisted.model");
 const Logger = require("../../modules/Logger");
 
 module.exports = {
@@ -20,8 +12,7 @@ module.exports = {
     const guildId = message.guild.id;
     const userId = message.author.id;
     const cooldowns = bot.cooldowns;
-    const guild = await getGuildById(guildId);
-    const blacklistedUsers = await Blacklist.find();
+    const guild = await bot.getGuildById(guildId);
     const mentions = message.mentions.members;
     const disabledCommands = guild?.disabled_commands;
     const lang = await bot.getGuildLang(guildId);
@@ -48,16 +39,6 @@ module.exports = {
 
     if (message.mentions.has(bot.user.id) && !command) {
       message.channel.send(`${lang.GLOBAL.SERVER_PREFIX}: \`${serverPrefix}\``);
-    }
-
-    if (blacklistedUsers) {
-      const isBlacklisted = blacklistedUsers.find(
-        (u) => u.user_id === message.author.id
-      );
-
-      if (isBlacklisted) {
-        return message(lang.MEMBER.BLACKLISTED);
-      }
     }
 
     try {
@@ -142,7 +123,7 @@ module.exports = {
         return;
       }
     } catch (error) {
-      sendErrorLog(bot, error, "error", message.content);
+      bot.sendErrorLog(bot, error, "error", message.content);
       const embed = BaseEmbed(message)
         .setTitle(lang.GLOBAL.ERROR)
         .setDescription(`\`\`\`js${e}\`\`\``);

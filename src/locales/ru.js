@@ -23,6 +23,7 @@ module.exports = {
     USEFUL_LINKS: "Полезные ссылки",
     SUPPORT_SERVER: "Сервер поддержки",
     ADD: "Добавить к себе",
+    SOURCE_CODE: "Исходный код",
     USED_APIS: "Используемые API",
     VOTE: "Проголосуйте за меня",
     ACKNOWLEDGMENTS: "Благодарности",

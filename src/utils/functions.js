@@ -251,6 +251,7 @@ function isHex(h) {
 }
 
 module.exports = {
+  functions: [
   sendErrorLog,
   formatDate,
   toCapitalize,
@@ -266,5 +267,6 @@ module.exports = {
   getLanguages,
   formatNumber,
   isHex,
-  getGuildLang,
+  getGuildLang
+  ]
 };

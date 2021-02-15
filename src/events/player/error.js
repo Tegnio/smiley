@@ -1,5 +1,3 @@
-const { sendErrorLog } = require("../../utils/functions");
-
 module.exports = {
   name: "error",
   async execute(bot, error, message) {
@@ -19,7 +17,7 @@ module.exports = {
         return message.channel.send(lang.MUSIC.LIVE_NOT_SUPPORTED);
       }
       default: {
-        sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
+        bot.sendErrorLog(bot, { stack: error, name: "discord-player" }, "error");
         return message.channel.send(lang.GLOBAL.ERROR);
       }
     }

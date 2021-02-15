@@ -1,14 +1,14 @@
 {
   "name": "smiley",
-  "version": "1.1.1",
-  "description": " A unique bot built to entertain Discord servers of all sizes.",
-  "repository": "https://github.com/Tegnio6882/smiley.git",
-  "main": "src/index.js",
+  "version": "1.1.2",
+  "description": "A unique bot built to entertain Discord servers of all sizes.",
+  "repository": "https://github.com/Tegnio/smiley.git",
+  "main": "index.js",
   "engines": {
     "node": ">=14.0.0"
   },
-  "author": "Tegnio6882",
-  "license": "BSD-3-Clause",
+  "author": "Tegnio",
+  "license": "MIT",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
     "chalk": "^4.1.0",
@@ -23,7 +23,6 @@
     "mongoose": "^5.11.14",
     "ms": "^2.1.3",
     "node-fetch": "^2.6.1",
-    "sdc-api-wrapper": "^1.1.9",
     "ytdl-core": "^4.4.5"
   }
 }

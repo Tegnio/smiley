@@ -23,6 +23,7 @@ module.exports = {
     USEFUL_LINKS: "Useful links",
     SUPPORT_SERVER: "Support server",
     ADD: "Click here to add me",
+    SOURCE_CODE: "Source code",
     USED_APIS: "Used APIs",
     VOTE: "Vote for me",
     ACKNOWLEDGMENTS: "Acknowlegdements",
